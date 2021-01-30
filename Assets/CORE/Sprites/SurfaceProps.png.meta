@@ -1,0 +1,719 @@
+fileFormatVersion: 2
+guid: f441ab72e0869cd43ba02c72b2fdaca1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -144625509473758220
+    second: OrangeBigTree
+  - first:
+      213: -300005348103414497
+    second: OrangeBush_1
+  - first:
+      213: 7550027271175125634
+    second: SurfaceProps_5
+  - first:
+      213: 6174736614462519638
+    second: SurfaceProps_6
+  - first:
+      213: 7884730426611140355
+    second: GreyGreenBush1
+  - first:
+      213: 3880557980257177183
+    second: SurfaceProps_8
+  - first:
+      213: -4986111736775547415
+    second: OrangeSmallTree
+  - first:
+      213: 1584666992877949199
+    second: SurfaceProps_10
+  - first:
+      213: -325923276521414839
+    second: SurfaceProps_11
+  - first:
+      213: 2472546057264334995
+    second: SurfaceProps_12
+  - first:
+      213: -106356631378558546
+    second: Monolith
+  - first:
+      213: 2160960197381488191
+    second: SurfaceProps_14
+  - first:
+      213: -5483283812718454967
+    second: GreyGreenBush2
+  - first:
+      213: 2841580945304031388
+    second: OrangeBush_2
+  - first:
+      213: -8316250545181688562
+    second: SurfaceProps_21
+  - first:
+      213: -7938570456989609270
+    second: SurfaceProps_22
+  - first:
+      213: -3670956624404410848
+    second: CyanBigTree
+  - first:
+      213: 8266987988355086014
+    second: CyanBush1
+  - first:
+      213: 6744855009006912392
+    second: SurfaceProps_25
+  - first:
+      213: -7460115414709588728
+    second: SurfaceProps_26
+  - first:
+      213: -5495386544984402791
+    second: GreyBush1
+  - first:
+      213: 7346296530316460540
+    second: SurfaceProps_28
+  - first:
+      213: 7847941925731106692
+    second: SurfaceProps_29
+  - first:
+      213: 8635446644642478407
+    second: CyanSmallTree
+  - first:
+      213: -1183701683671884076
+    second: SurfaceProps_31
+  - first:
+      213: 3483760412632101818
+    second: Tomb
+  - first:
+      213: -7362599250104943391
+    second: SurfaceProps_33
+  - first:
+      213: -7108511548402671921
+    second: SurfaceProps_34
+  - first:
+      213: 8422648342667436831
+    second: SurfaceProps_35
+  - first:
+      213: 1056771015864487432
+    second: SurfaceProps_36
+  - first:
+      213: -4115029369788141822
+    second: SurfaceProps_37
+  - first:
+      213: 7606318541055311197
+    second: SurfaceProps_38
+  - first:
+      213: -4431399549003931054
+    second: GreyBush2
+  - first:
+      213: -7155130942464873972
+    second: CyanBush2
+  - first:
+      213: -5525316411550033709
+    second: Altar
+  - first:
+      213: -5526816527519653329
+    second: DeadBush
+  - first:
+      213: -9143053317563773978
+    second: DeadBigTree
+  - first:
+      213: 506318337965674322
+    second: DeadSmallTree
+  - first:
+      213: -6534714519864918934
+    second: BrownBush1
+  - first:
+      213: -5846130686462392238
+    second: SurfaceProps_46
+  - first:
+      213: 8754796084208311838
+    second: BrokenPortal
+  - first:
+      213: 5647007391417792539
+    second: DeadBush2
+  - first:
+      213: -2194593882463246542
+    second: BrownBush2
+  - first:
+      213: 4736015148949321148
+    second: BusStop
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OrangeBigTree
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1549
+        width: 450
+        height: 514
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f35b5a8ddf2efdf0800000000000000
+      internalID: -144625509473758220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeBush_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1877
+        width: 323
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d1493b9ba26dbf0800000000000000
+      internalID: -300005348103414497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreyGreenBush1
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 1928
+        width: 247
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3070fd34c803c6d60800000000000000
+      internalID: 7884730426611140355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeSmallTree
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1630
+        width: 304
+        height: 363
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5661ffac5cdcab0800000000000000
+      internalID: -4986111736775547415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monolith
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1486
+        width: 237
+        height: 409
+      alignment: 9
+      pivot: {x: 0.5, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea18c2f0535268ef0800000000000000
+      internalID: -106356631378558546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreyGreenBush2
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 1551
+        width: 245
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947544c8c6677e3b0800000000000000
+      internalID: -5483283812718454967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OrangeBush_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1501
+        width: 295
+        height: 225
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c909d5d70d25f6720800000000000000
+      internalID: 2841580945304031388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyanBigTree
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 869
+        width: 448
+        height: 516
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e028056642e0dc0800000000000000
+      internalID: -3670956624404410848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyanBush1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1151
+        width: 297
+        height: 222
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6735866cd3ab270800000000000000
+      internalID: 8266987988355086014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreyBush1
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1209
+        width: 247
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9945eba9d077cb3b0800000000000000
+      internalID: -5495386544984402791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyanSmallTree
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 944
+        width: 305
+        height: 363
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749f0c288f447d770800000000000000
+      internalID: 8635446644642478407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomb
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 988
+        width: 204
+        height: 289
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3318533adc85030800000000000000
+      internalID: 3483760412632101818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreyBush2
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 817
+        width: 245
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2526bc7b6918082c0800000000000000
+      internalID: -4431399549003931054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CyanBush2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 847
+        width: 322
+        height: 187
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0aa9fc315ed3bc90800000000000000
+      internalID: -7155130942464873972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Altar
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 608
+        width: 472
+        height: 288
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d89ce18ff12253b0800000000000000
+      internalID: -5525316411550033709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBush
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 580
+        width: 254
+        height: 142
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22ee6a86adcc43b0800000000000000
+      internalID: -5526816527519653329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBigTree
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 253
+        width: 407
+        height: 459
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb872c13795d1180800000000000000
+      internalID: -9143053317563773978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadSmallTree
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 298
+        width: 215
+        height: 319
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fc5b588ddc60700800000000000000
+      internalID: 506318337965674322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownBush1
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 497
+        width: 246
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c3dde34c70055a0800000000000000
+      internalID: -6534714519864918934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrokenPortal
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 126
+        width: 316
+        height: 381
+      alignment: 9
+      pivot: {x: 0.3, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e973857a84f7970800000000000000
+      internalID: 8754796084208311838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeadBush2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 296
+        width: 224
+        height: 167
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b187679ad433e5e40800000000000000
+      internalID: 5647007391417792539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BrownBush2
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 99
+        width: 245
+        height: 256
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2376889cd7c3b81e0800000000000000
+      internalID: -2194593882463246542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BusStop
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 157
+        width: 107
+        height: 306
+      alignment: 9
+      pivot: {x: 0.47, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb53efb7fa4b9b140800000000000000
+      internalID: 4736015148949321148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6c4ed3e8801ffe7499866afb023f807c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

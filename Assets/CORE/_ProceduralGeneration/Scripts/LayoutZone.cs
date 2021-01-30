@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace GlobalGameJam2021
 {
-    [CreateAssetMenu(fileName = "DAT_LayoutZone", menuName = "Datas/LayoutZone", order = 50)]
+    [CreateAssetMenu(fileName = "DAT_LayoutZone", menuName = "Datas/Layout/LayoutZone", order = 50)]
 	public class LayoutZone : ScriptableObject
     {
         #region Content

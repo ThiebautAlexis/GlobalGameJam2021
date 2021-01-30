@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace GlobalGameJam2021
 {
-    [CreateAssetMenu(fileName = "DAT_PlanetLayoutOptions", menuName = "Datas/PlanetLayoutOptions", order = 50)]
+    [CreateAssetMenu(fileName = "DAT_PlanetLayoutOptions", menuName = "Datas/Layout/PlanetLayoutOptions", order = 50)]
 	public class PlanetLayoutOptions : ScriptableObject
     {
         #region Content

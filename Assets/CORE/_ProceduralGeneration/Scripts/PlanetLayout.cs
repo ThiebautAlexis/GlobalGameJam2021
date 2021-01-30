@@ -10,14 +10,15 @@ using System.Collections.Generic;
 
 namespace GlobalGameJam2021
 {
-    [CreateAssetMenu(fileName = "DAT_PlanetLayout", menuName = "Datas/PlanetLayout", order = 50)]
+    [CreateAssetMenu(fileName = "DAT_PlanetLayout", menuName = "Datas/Layout/PlanetLayout", order = 50)]
     public class PlanetLayout : ScriptableObject
     {
         #region Content
         [HorizontalLine(1, order = 0), Section("PlanetLayout", order = 1), Space(order = 2)]
         [SerializeField] private Sprite planetSprite;
         public Sprite PlanetSprite => planetSprite; 
-        [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { }; 
+        [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { };
+        [SerializeField] private LayoutProps[] props = new LayoutProps[] { }; 
         [SerializeField] private PlanetLayoutOptions[] options = new PlanetLayoutOptions[] { };
         
 
@@ -25,11 +26,20 @@ namespace GlobalGameJam2021
 
 
         #region Methods
-        public List<Vector2> GenerateLayout(Vector2 _origin)
+        public Transform GenerateLayout(Vector2 _origin)
         {
+
+            Transform _t = new GameObject("Planet").transform;
+            _t.SetPositionAndRotation(_origin, Quaternion.identity);
+
+            SpriteRenderer _sr = new GameObject("Planet Sprite").AddComponent<SpriteRenderer>();
+            _sr.transform.position = _origin;
+            _sr.transform.SetParent(_t);
+            _sr.sprite = planetSprite;
+
             // Select the options for this generation
-            int _optionsIndex = Random.Range(0, options.Length);
-            PlanetLayoutOptions _options = options[_optionsIndex];
+            int _index = Random.Range(0, options.Length);
+            PlanetLayoutOptions _options = options[_index];
             // Get the number of props instancied 
             int[] _zonesCount = new int[layoutZones.Length];
             int _globalCount = _options.Count;
@@ -42,18 +52,31 @@ namespace GlobalGameJam2021
                 _globalCount -= _c;
                 if (_globalCount <= 0) break; 
             }
-            List<Vector2> positions = new List<Vector2>();
+
+            List<Vector2> _positions = new List<Vector2>();
             for (int i = 0; i < layoutZones.Length; i++)
             {
-                positions.AddRange(DiscSampling.GeneratePoints(_origin + layoutZones[i].OffsetPosition, layoutZones[i].Radius, layoutZones[i].Spacing, _zonesCount[i]));
+                _positions.AddRange(DiscSampling.GeneratePoints(_origin + layoutZones[i].OffsetPosition, layoutZones[i].Radius, layoutZones[i].Spacing, _zonesCount[i]));
             }
-            
+
+            _index = Random.Range(0, props.Length);
+            LayoutProps _props = props[_index];
+            GameObject _go = new GameObject(); 
             // First of all, we need to instanciate the main objects (tools, etc...)
-
+            for (int i = 0; i < _props.Tools.Length; i++)
+            {
+                _index = Random.Range(0,_positions.Count);
+                Instantiate(_go/*_props.Tools[i]*/, _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
+                _positions.RemoveAt(_index); 
+            }
             // Then Instantiate the props and the bonus
+            for (int i = 0; i < _positions.Count; i++)
+            {
+                //_index = Random.Range(0, _props.Props.Length);
+                Instantiate(_go/*_props.Props[_index]*/, _positions[i], Quaternion.Euler(0, 0, Random.value * 360), _t);
+            }
 
-
-            return positions; 
+            return _t; 
         }
 
         public void Draw(Vector3 _origin)

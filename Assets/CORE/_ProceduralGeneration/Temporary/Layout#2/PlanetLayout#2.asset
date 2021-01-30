@@ -20,5 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4bea427bd48cf04d8039063de96f5b0, type: 2}
   - {fileID: 11400000, guid: 67f151cb7eb67cd4b921dc3044c49e41, type: 2}
   - {fileID: 11400000, guid: 260244eb07493ca49b8d956cd5bed0ba, type: 2}
+  props:
+  - {fileID: 11400000, guid: a07ab945a364f40438477934032b2ad9, type: 2}
   options:
   - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

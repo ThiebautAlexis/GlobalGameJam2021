@@ -12,7 +12,6 @@ namespace GlobalGameJam2021
 {
 	public static class DiscSampling
     {
-
 		#region Methods
 		public static List<Vector2> GeneratePoints(Vector2 _center, float _radius, float _spacing, int _count, int _samplesBeforeRejections = 50)
 		{
@@ -27,7 +26,7 @@ namespace GlobalGameJam2021
 			_spawnPoints.Add(_candidate);
 			int _index;
 			Vector2 _base; 
-			for (int i = 0; i < _count; i++)
+			for (int i = 0; i < _count-1; i++)
 			{
 				_index = Random.Range(0, _spawnPoints.Count);
 				_base = _spawnPoints[_index];
