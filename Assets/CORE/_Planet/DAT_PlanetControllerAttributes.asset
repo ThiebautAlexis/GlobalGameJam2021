@@ -12,14 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0452a233e11917347917fd1772713ede, type: 3}
   m_Name: DAT_PlanetControllerAttributes
   m_EditorClassIdentifier: 
-  Quit:
-    m_Name: Quit
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 43c41c02-53a0-47ce-a74f-3f34c2a275fd
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
+  RotationSpeed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 100
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   Move:
     m_Name: Move
     m_Type: 0
@@ -52,11 +59,3 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move
       m_Flags: 8
-  Action:
-    m_Name: Action
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 3a0d6a50-1ceb-4a37-bc0d-75385a8de96a
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []

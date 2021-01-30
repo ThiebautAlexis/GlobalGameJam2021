@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef6f90c97e522e4d9b866dcd178a0c6, type: 3}
+  m_Name: DAT_GameManagerAttributes
+  m_EditorClassIdentifier: 
+  ActionInput:
+    m_Name: Action Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: eacb15d2-9988-45c7-93c3-f1ce543fa1cc
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 5c818971-cd0b-429c-9009-ed043aab75af
+      m_Path: <Keyboard>/anyKey
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action Input
+      m_Flags: 0
+  QuitInput:
+    m_Name: Quit Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6e19314c-5a2d-4c0f-b0b4-38d625206f78
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d91bfe7b-1381-4d9a-990c-4ddea1d6ebdf
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Quit Input
+      m_Flags: 0
