@@ -2,7 +2,8 @@
     "name": "GGJ2021",
     "references": [
         "EnhancedEditor",
-        "UnityEngine.UI"
+        "UnityEngine.UI",
+        "Unity.InputSystem"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

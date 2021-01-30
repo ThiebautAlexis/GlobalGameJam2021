@@ -19,9 +19,18 @@ namespace GlobalGameJam2021
         public AnimationCurve DigSpeed = new AnimationCurve();
         public AnimationCurve AboutTurnSpeed = new AnimationCurve();
 
+        [Space]
+
+        public AnimationCurve RotationSpeed = new AnimationCurve();
+
         [HorizontalLine(1)]
 
-        public LayerMask layerMask = new LayerMask();
-		#endregion
+        public LayerMask LayerMask = new LayerMask();
+
+        [HorizontalLine(1)]
+
+        public float LightOriginalSize = 5;
+        public float LightExtendedSize = 10;
+        #endregion
     }
 }
