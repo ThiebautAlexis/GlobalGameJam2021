@@ -50,6 +50,32 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Monobehaviour
+        private float speedVar = 0;
+
+        // -----------------------
+
+        private void Update()
+        {
+            // Rotates the planet.
+            float _movement = attributes.Move.ReadValue<float>();
+            if (_movement != 0)
+            {
+                speedVar = Mathf.Min(speedVar + Time.deltaTime, attributes.RotationSpeed[attributes.RotationSpeed.length - 1].time);
+                speed = attributes.RotationSpeed.Evaluate(speedVar);
+
+                _movement *= Time.deltaTime * speed;
+                transform.RotateAround(collider.bounds.center, Vector3.forward, _movement * Time.deltaTime * speed);
+            }
+            else
+            {
+                speedVar = 0;
+                speed = 0;
+            }
+
+            if (hasDigger)
+                digger.Rotate(_movement);
+        }
+
         private void OnEnable()
         {
             attributes.EnableInputs();
@@ -58,19 +84,6 @@ namespace GlobalGameJam2021
         private void OnDisable()
         {
             attributes.DisableInputs();
-        }
-
-        private void Update()
-        {
-            float _movement = attributes.Move.ReadValue<float>();
-            if (_movement != 0)
-            {
-                _movement *= Time.deltaTime * speed;
-                transform.RotateAround(collider.bounds.center, Vector3.forward, _movement * Time.deltaTime * speed);
-
-                if (hasDigger)
-                    digger.Rotate(_movement);
-            }
         }
         #endregion
 

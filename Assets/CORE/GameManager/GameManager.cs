@@ -4,9 +4,11 @@
 //
 // ====================================================================================== //
 
-using System.Collections;
 using EnhancedEditor;
+using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GlobalGameJam2021
 {
@@ -18,19 +20,56 @@ namespace GlobalGameJam2021
         [HorizontalLine(1, order = 0), Section("GAME MANAGER", order = 1)]
 
         [SerializeField, Required] private GameManagerAttributes attributes = null;
+        [SerializeField, Required] private Animator title = null;
+        [SerializeField, Required] private TextMeshProUGUI scoreText = null;
+
+        [HorizontalLine(1)]
+
+        [SerializeField, ReadOnly] private int score = 0;
+        #endregion
+
+        #region Animation
+        private readonly int switchTitle_Hash = Animator.StringToHash("Switch");
+
+        // -----------------------
+
+        private void PlaySwitchTitle() => title.SetTrigger(switchTitle_Hash);
         #endregion
 
         #region Methods
+
+        #region Level Management
+        /// <summary>
+        /// Reloads the whole game.
+        /// </summary>
+        public void ResetGame() => SceneManager.LoadScene(0, LoadSceneMode.Single);
+        #endregion
+
+        #region Score
+        /// <summary>
+        /// Increases player score.
+        /// </summary>
+        /// <param name="_increase"></param>
+        public void IncreaseScore(int _increase)
+        {
+            score += _increase;
+            scoreText.text = score.ToString("### ### ### ###");
+        }
+        #endregion
 
         #region Monobehaviour
         private void Awake() => Instance = this;
 
         private IEnumerator Start()
         {
+            // Start the game.
+            Time.timeScale = 0;
+            scoreText.text = string.Empty;
             while (!attributes.ActionInput.triggered)
                 yield return null;
 
-            // Start the game.
+            Time.timeScale = 1;
+            PlaySwitchTitle();
         }
 
         private void OnEnable()
@@ -45,7 +84,9 @@ namespace GlobalGameJam2021
 
         private void Update()
         {
-            
+            // Quit button.
+            if (attributes.QuitInput.triggered)
+                Application.Quit();
         }
         #endregion
 
