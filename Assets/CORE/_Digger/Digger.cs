@@ -34,6 +34,7 @@ namespace GlobalGameJam2021
         [SerializeField, ReadOnly] private DiggerState state = DiggerState.Spawn;
         [SerializeField, ReadOnly] private float speed = 1;
         [SerializeField, ReadOnly] private float rotationSpeed = 1;
+        [SerializeField, ReadOnly] private float rotationLerpSpeed = 1;
 
         [Space]
 
@@ -53,6 +54,10 @@ namespace GlobalGameJam2021
         #region Planet
         private float rotationSpeedVar = 0;
 
+        private Quaternion rotationLerpTo = new Quaternion();
+        private float rotationLerpVar = 0;
+        private bool isLerping = false;
+
         // -----------------------
 
         /// <summary>
@@ -71,7 +76,16 @@ namespace GlobalGameJam2021
             rotationSpeed = attributes.RotationSpeed.Evaluate(rotationSpeedVar) * _speed;
 
             transform.Rotate(Vector3.forward, rotationSpeed);
+
+            Vector2 _previousMovement = movement;
             movement = transform.rotation * Vector3.up;
+
+            // If lerping, rotate target lerp rotation.
+            if (isLerping)
+            {
+                float _angle = Vector2.SignedAngle(movement, _previousMovement);
+                rotationLerpTo = (Quaternion.AngleAxis(_angle, Vector3.forward) * rotationLerpTo).normalized;
+            }
         }
 
         /// <summary>
@@ -82,10 +96,11 @@ namespace GlobalGameJam2021
             speedVar = 0;
             if (state != DiggerState.Digging)
             {
-                transform.Rotate(Vector3.forward, 180);
-                movement = transform.rotation * Vector3.up;
+                /*transform.Rotate(Vector3.forward, 180);
+                movement = transform.rotation * Vector3.up;*/
             }
 
+            isLerping = false;
             state = DiggerState.Digging;
         }
 
@@ -97,10 +112,14 @@ namespace GlobalGameJam2021
             speedVar = 0;
             state = DiggerState.AboutTurn;
 
-            movement = (transform.position - _planet.Center).normalized;
+            // Start lerping rotation.
+            isLerping = true;
+            rotationLerpVar = 0;
 
-            float _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
+            Vector2 _direction = -(transform.position - _planet.Center).normalized;
+            float _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+
+            rotationLerpTo = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
         }
         #endregion
 
@@ -242,6 +261,23 @@ namespace GlobalGameJam2021
 
         private void Update()
         {
+            if (isLerping)
+            {
+                rotationLerpVar = Mathf.Min(rotationLerpVar + Time.deltaTime, attributes.RotationLerpSpeed[attributes.RotationLerpSpeed.length - 1].time);
+                rotationLerpSpeed = attributes.RotationLerpSpeed.Evaluate(rotationLerpVar);
+
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationLerpTo, rotationLerpSpeed);
+                if (transform.rotation == rotationLerpTo)
+                    isLerping = false;
+
+                movement = transform.rotation * Vector3.up;
+
+                /*movement = Vector3.Lerp(originalMovement, targetMovement, movementLerpVar / lerpSpeed);
+
+                float _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));*/
+            }
+
             switch (state)
             {
                 case DiggerState.Spawn:

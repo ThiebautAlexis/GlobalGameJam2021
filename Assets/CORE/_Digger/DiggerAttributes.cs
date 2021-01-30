@@ -22,6 +22,7 @@ namespace GlobalGameJam2021
         [Space]
 
         public AnimationCurve RotationSpeed = new AnimationCurve();
+        public AnimationCurve RotationLerpSpeed = new AnimationCurve();
 
         [HorizontalLine(1)]
 
