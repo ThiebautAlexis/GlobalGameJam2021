@@ -94,14 +94,11 @@ namespace GlobalGameJam2021
         public void OnEnterPlanet(PlanetController _planet)
         {
             speedVar = 0;
-            if (state != DiggerState.Digging)
-            {
-                /*transform.Rotate(Vector3.forward, 180);
-                movement = transform.rotation * Vector3.up;*/
-            }
 
             isLerping = false;
             state = DiggerState.Digging;
+
+            CameraDigger.Instance.Shake(.5f);
         }
 
         /// <summary>
@@ -124,13 +121,26 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Key Items
-        public void PickupLantern()
+        public void PickupKeyItem(KeyItemType _type)
         {
-            // Lerp.
-            lightMask.transform.localScale = new Vector3(attributes.LightExtendedSize, attributes.LightExtendedSize, 1);
-        }
+            switch (_type)
+            {
+                case KeyItemType.Unknown:
+                    break;
 
-        public void PickupPickaxe() => hasPickaxe = true;
+                case KeyItemType.Pickaxe:
+                    hasPickaxe = true;
+                    break;
+
+                case KeyItemType.Lantern:
+                    // Lerp.
+                    lightMask.transform.localScale = new Vector3(attributes.LightExtendedSize, attributes.LightExtendedSize, 1);
+                    break;
+
+                default:
+                    break;
+            }
+        }
         #endregion
 
         #endregion
@@ -271,11 +281,6 @@ namespace GlobalGameJam2021
                     isLerping = false;
 
                 movement = transform.rotation * Vector3.up;
-
-                /*movement = Vector3.Lerp(originalMovement, targetMovement, movementLerpVar / lerpSpeed);
-
-                float _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));*/
             }
 
             switch (state)

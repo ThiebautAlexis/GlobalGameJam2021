@@ -6,15 +6,8 @@
 
 namespace GlobalGameJam2021
 {
-    public class Pickaxe : Trigger
+    public class Pickaxe : KeyItem
     {
-        #region Methods
-        public override bool OnEnter(Digger _digger)
-        {
-            _digger.PickupPickaxe();
-            Destroy(gameObject);
-            return false;
-        }
-        #endregion
+        public override KeyItemType ItemType => KeyItemType.Pickaxe;
     }
 }

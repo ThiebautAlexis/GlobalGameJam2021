@@ -6,15 +6,8 @@
 
 namespace GlobalGameJam2021
 {
-	public class Lantern : Trigger
+	public class Lantern : KeyItem
     {
-		#region Methods
-		public override bool OnEnter(Digger _digger)
-        {
-			_digger.PickupLantern();
-			Destroy(gameObject);
-			return false;
-        }
-		#endregion
+		public override KeyItemType ItemType => KeyItemType.Lantern;
 	}
 }

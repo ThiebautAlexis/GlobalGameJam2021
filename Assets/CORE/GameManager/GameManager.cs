@@ -26,6 +26,7 @@ namespace GlobalGameJam2021
         [HorizontalLine(1)]
 
         [SerializeField, ReadOnly] private int score = 0;
+        [SerializeField, ReadOnly] private int keyItemCount = 0;
         #endregion
 
         #region Animation
@@ -55,6 +56,13 @@ namespace GlobalGameJam2021
             score += _increase;
             scoreText.text = score.ToString("### ### ### ###");
         }
+
+        public void PickupKeyItem()
+        {
+            keyItemCount--;
+        }
+
+        public void IncreaseKeyItemCount() => keyItemCount++;
         #endregion
 
         #region Monobehaviour
