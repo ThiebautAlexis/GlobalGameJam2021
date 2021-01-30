@@ -36,10 +36,8 @@ namespace GlobalGameJam2021
 
 		private void OnDrawGizmos()
 		{
-			
 			if (debuggedLayout == null) return;
 			debuggedLayout.Draw(transform.position);
-			debugRenderer.sprite = debuggedLayout.PlanetSprite; 
 		}
 		#endregion
 	}
