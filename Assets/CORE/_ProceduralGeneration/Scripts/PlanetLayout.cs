@@ -24,7 +24,6 @@ namespace GlobalGameJam2021
 
         #endregion
 
-
         #region Methods
         public Transform GenerateLayout(Vector2 _origin)
         {
@@ -72,8 +71,8 @@ namespace GlobalGameJam2021
             // Then Instantiate the props and the bonus
             for (int i = 0; i < _positions.Count; i++)
             {
-                //_index = Random.Range(0, _props.Props.Length);
-                Instantiate(_go/*_props.Props[_index]*/, _positions[i], Quaternion.Euler(0, 0, Random.value * 360), _t);
+                _index = Random.Range(0, _props.Props.Length);
+                Instantiate(_props.Props[_index], _positions[i], Quaternion.Euler(0, 0, Random.value * 360), _t);
             }
 
             return _t; 

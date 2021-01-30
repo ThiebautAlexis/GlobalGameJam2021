@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2249a00bd1f33604bb563ecce5fdee54, type: 3}
   m_Name: LayoutOptions#1
   m_EditorClassIdentifier: 
-  propsCount: {x: 30, y: 30}
+  propsCount: {x: 15, y: 15}
   globalSpacing: 1
   chunkProbability: 0.2
   lavaProbability: 0.1
