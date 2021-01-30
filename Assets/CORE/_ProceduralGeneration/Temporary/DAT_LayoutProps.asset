@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: DAT_LayoutProps
   m_EditorClassIdentifier: 
   tools: []
-  props: []
+  props:
+  - {fileID: -3126320162996227214, guid: c6e5397dedd7a4741b2a76819475c3b3, type: 3}
+  - {fileID: 6980748686060233547, guid: 237961b9da2a2694f938d170be233d71, type: 3}
+  - {fileID: 4507051681043791388, guid: 66a82901851bc274a9a5d8e71ff42006, type: 3}
+  - {fileID: -9165263629853430941, guid: 2691a60c5b1836a4f83118d467acff86, type: 3}
+  - {fileID: -4761234809721652907, guid: acb1e5e7c4d821b42a22395679d741af, type: 3}
+  - {fileID: 9090301385134502441, guid: 8950382e388b83347bbf430cb0e7fc40, type: 3}
+  - {fileID: -8744915919340212649, guid: cf8e243a4a44b5d4ba7e965b2760c5cd, type: 3}
+  - {fileID: -8236889631923297657, guid: cffb210e242cacc43b693062b295b06a, type: 3}
   lavaLakes: []

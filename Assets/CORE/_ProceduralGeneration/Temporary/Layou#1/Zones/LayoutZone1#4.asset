@@ -15,4 +15,4 @@ MonoBehaviour:
   offsetPosition: {x: 2, y: -2}
   radius: 1.9
   spacing: 0.88
-  count: {x: 6, y: 8}
+  count: {x: 4, y: 8}
