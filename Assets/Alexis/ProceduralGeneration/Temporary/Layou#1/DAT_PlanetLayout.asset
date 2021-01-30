@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetLayout
+  m_EditorClassIdentifier: 
+  planetSprite: {fileID: -1835459748006012071, guid: 817feca05b3ecce42a127f9e386e49b9,
+    type: 3}
+  layoutZones:
+  - {fileID: 11400000, guid: 612bcc3c281c0634ca7f6b4dcb685e57, type: 2}
+  - {fileID: 11400000, guid: 578205cad9dcb344ba84528d2b8a0810, type: 2}
+  - {fileID: 11400000, guid: 23ad7e45fd0a5e04b8b65665b57c7cb7, type: 2}
+  - {fileID: 11400000, guid: 3c3574534f850184a95a241118db67bb, type: 2}
+  - {fileID: 11400000, guid: 44503d8f90dc5a24ea5fca689f1da091, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}
