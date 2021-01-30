@@ -15,8 +15,7 @@ namespace GlobalGameJam2021
     {
         #region Content
         [HorizontalLine(1, order = 0), Section("PlanetLayout", order = 1), Space(order = 2)]
-        [SerializeField] private Sprite planetSprite;
-        public Sprite PlanetSprite => planetSprite; 
+        [SerializeField] private PlanetController planet;
         [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { };
         [SerializeField] private LayoutProps[] props = new LayoutProps[] { }; 
         [SerializeField] private PlanetLayoutOptions[] options = new PlanetLayoutOptions[] { };
@@ -28,13 +27,8 @@ namespace GlobalGameJam2021
         public Transform GenerateLayout(Vector2 _origin)
         {
 
-            Transform _t = new GameObject("Planet").transform;
-            _t.SetPositionAndRotation(_origin, Quaternion.identity);
-
-            SpriteRenderer _sr = new GameObject("Planet Sprite").AddComponent<SpriteRenderer>();
-            _sr.transform.position = _origin;
-            _sr.transform.SetParent(_t);
-            _sr.sprite = planetSprite;
+            Transform _t =Instantiate(planet, _origin, Quaternion.identity).transform;
+          
 
             // Select the options for this generation
             int _index = Random.Range(0, options.Length);
@@ -65,14 +59,14 @@ namespace GlobalGameJam2021
             for (int i = 0; i < _props.Tools.Length; i++)
             {
                 _index = Random.Range(0,_positions.Count);
-                Instantiate(_go/*_props.Tools[i]*/, _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
+                Instantiate(_props.Tools[i], _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
                 _positions.RemoveAt(_index); 
             }
             // Then Instantiate the props and the bonus
             for (int i = 0; i < _positions.Count; i++)
             {
                 _index = Random.Range(0, _props.Props.Length);
-                Instantiate(_props.Props[_index], _positions[i], Quaternion.Euler(0, 0, Random.value * 360), _t);
+                Instantiate(_props.Props[_index], _positions[i], Quaternion.identity, _t);
             }
 
             return _t; 
