@@ -15,7 +15,8 @@ namespace GlobalGameJam2021
 		private void Start()
 		{
 			float _value = Random.Range(.3f, .65f);
-			transform.localScale = new Vector3(_value, _value, 1);	
+			transform.localScale = new Vector3(_value, _value, 1);
+			transform.position = new Vector3(transform.position.x, transform.position.y, .011f);
 		}
 		public override bool OnEnter(Digger _digger) => base.OnEnter(_digger);
 		#endregion
