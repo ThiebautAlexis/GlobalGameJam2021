@@ -38,6 +38,7 @@ namespace GlobalGameJam2021
         public void StartTravel(Vector3 _destination)
         {
             isTraveling = true;
+            travelVar = 0;
             travelDestination = new Vector3(_destination.x, _destination.y, transform.position.z);
         }
 

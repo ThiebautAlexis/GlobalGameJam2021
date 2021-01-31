@@ -115,12 +115,16 @@ namespace GlobalGameJam2021
         /// </summary>
         public void OnEnterPlanet(PlanetController _planet)
         {
-            if (state == DiggerState.Traveling || state == DiggerState.Spawn)
+            if (state == DiggerState.Spawn)
+            {
                 _planet.Activate();
-
-            if (state == DiggerState.Traveling)
+            }
+            else if (state == DiggerState.Traveling)
             {
                 isLevelCompleted = false;
+                _planet.Activate();
+
+                CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
                 PlanetController[] _planets = FindObjectsOfType<PlanetController>();
                 for (int _i = 0; _i < _planets.Length; _i++)
@@ -134,8 +138,9 @@ namespace GlobalGameJam2021
 
                     _planet.transform.position = Vector3.zero;
                 }
-                // Destroy planet.
             }
+            else
+                CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
             speedVar = 0;
 
@@ -143,7 +148,6 @@ namespace GlobalGameJam2021
             state = DiggerState.Digging;
 
             PlayDigging();
-            CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
             dirtFX.Play();
             Instantiate(attributes.DigFX, transform.position, Quaternion.identity);

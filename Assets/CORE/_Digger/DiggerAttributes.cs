@@ -36,6 +36,10 @@ namespace GlobalGameJam2021
 
         [HorizontalLine(1)]
 
+        [Range(0, 1)] public float PlanetShockShake = .7f;
+
+        [Space]
+
         [Range(0, 1)] public float DiggingInShake = .25f;
         [Range(0, 1)] public float DiggingOutShake = .25f;
 
