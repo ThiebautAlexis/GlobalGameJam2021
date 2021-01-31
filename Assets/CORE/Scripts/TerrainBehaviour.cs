@@ -82,7 +82,6 @@ namespace GlobalGameJam2021
                 }
             }
 
-            Debug.LogError("In");
             cloneTexture.Apply(false);
         }
 

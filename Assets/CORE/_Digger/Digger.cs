@@ -115,12 +115,22 @@ namespace GlobalGameJam2021
         /// </summary>
         public void OnEnterPlanet(PlanetController _planet)
         {
-            if (state == DiggerState.Traveling || state == DiggerState.Spawn)
+            if (state == DiggerState.Spawn)
+            {
+                isLightLerping = true;
+                lightLerpValue = attributes.LightOriginalSize;
+
+                _planet.Activate();
+            }
+            else if (state == DiggerState.Traveling)
+            {
+                isLightLerping = true;
+                lightLerpValue = attributes.LightOriginalSize;
+
+                isLevelCompleted = false;
                 _planet.Activate();
 
-            if (state == DiggerState.Traveling)
-            {
-                isLevelCompleted = false;
+                CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
                 PlanetController[] _planets = FindObjectsOfType<PlanetController>();
                 for (int _i = 0; _i < _planets.Length; _i++)
@@ -134,8 +144,9 @@ namespace GlobalGameJam2021
 
                     _planet.transform.position = Vector3.zero;
                 }
-                // Destroy planet.
             }
+            else
+                CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
             speedVar = 0;
 
@@ -143,7 +154,6 @@ namespace GlobalGameJam2021
             state = DiggerState.Digging;
 
             PlayDigging();
-            CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
             dirtFX.Play();
             Instantiate(attributes.DigFX, transform.position, Quaternion.identity);
@@ -199,6 +209,11 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Key Items
+        private float lightLerpValue = 0;
+        private bool isLightLerping = false;
+
+        // -----------------------
+
         public void PickupKeyItem(KeyItemType _type)
         {
             switch (_type)
@@ -211,8 +226,8 @@ namespace GlobalGameJam2021
                     break;
 
                 case KeyItemType.Lantern:
-                    // Lerp.
-                    lightMask.transform.localScale = new Vector3(attributes.LightExtendedSize, attributes.LightExtendedSize, 1);
+                    isLightLerping = true;
+                    lightLerpValue = attributes.LightExtendedSize;
                     break;
 
                 default:
@@ -383,9 +398,6 @@ namespace GlobalGameJam2021
             contactFiler.layerMask = attributes.LayerMask;
             contactFiler.useLayerMask = true;
             contactFiler.useTriggers = true;
-
-            // Initialize objects.
-            lightMask.transform.localScale = new Vector3(attributes.LightOriginalSize, attributes.LightOriginalSize, 1);
         }
 
         private void Update()
@@ -400,6 +412,14 @@ namespace GlobalGameJam2021
                     isLerping = false;
 
                 movement = transform.rotation * Vector3.up;
+            }
+
+            if (isLightLerping)
+            {
+                float _value = Mathf.MoveTowards(lightMask.transform.localScale.x, lightLerpValue, Time.deltaTime * attributes.LightLerpSpeed);
+                lightMask.transform.localScale = new Vector3(_value, _value, 1);
+                if (_value == lightLerpValue)
+                    isLightLerping = false;
             }
 
             switch (state)

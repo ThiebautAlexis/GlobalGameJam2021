@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3391160467343034729}
   - component: {fileID: 4527826450078076291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &2648250766789774588
 GameObject:
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4470653054645980680}
   - component: {fileID: 3696278437508633615}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &4036537817073516923
 GameObject:
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5448418460421353229}
   - component: {fileID: 4900813994663891631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &8492424077515454344
 GameObject:
@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 3092371727990039608}
   - component: {fileID: 4507051681043791388}
   - component: {fileID: -2339212725586897444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DBlueOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}

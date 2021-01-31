@@ -37,6 +37,6 @@ MonoBehaviour:
   layoutZones:
   - {fileID: 11400000, guid: b688ed2c581ae9f43a27110568cc440e, type: 2}
   props:
-  - {fileID: 11400000, guid: a07ab945a364f40438477934032b2ad9, type: 2}
+  - {fileID: 11400000, guid: 1153378b69f5a0042b2277590cb07de0, type: 2}
   options:
   - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

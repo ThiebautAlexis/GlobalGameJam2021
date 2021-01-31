@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetLayoutP#3
+  m_EditorClassIdentifier: 
+  planet: {fileID: 3415482290707423726, guid: a1c3175f10ac60a44b4ca3da069ecd77, type: 3}
+  surfacesArches:
+  - start: {x: 3.8614838, y: 2.5693715}
+    end: {x: 0.32674092, y: 4.292187}
+    startTangent: {x: -0.40100074, y: 0.86140823}
+    endTangent: {x: 0.6683343, y: 0.23762989}
+  - start: {x: -0.6386291, y: 4.3664465}
+    end: {x: -3.742669, y: 2.79215}
+    startTangent: {x: -0.698038, y: -0.044555187}
+    endTangent: {x: 0.5940747, y: 0.7871485}
+  - start: {x: -4.1181545, y: 2.4045863}
+    end: {x: -4.594043, y: -1.9459285}
+    startTangent: {x: -0.60549736, y: -0.7478641}
+    endTangent: {x: -0.44237947, y: 2.0457008}
+  - start: {x: -4.3772683, y: -2.277968}
+    end: {x: -0.5777806, y: -4.2224274}
+    startTangent: {x: 0.15333557, y: -0.8589134}
+    endTangent: {x: -1.6268989, y: -0.60096073}
+  - start: {x: 0.81704223, y: -4.1576214}
+    end: {x: 4.8186436, y: -1.4938985}
+    startTangent: {x: 1.244747, y: -0.6567998}
+    endTangent: {x: -0.91950226, y: -1.7327954}
+  - start: {x: 4.818885, y: -1.2067676}
+    end: {x: 4.1920924, y: 2.164352}
+    startTangent: {x: 0.19375896, y: 1.5866573}
+    endTangent: {x: 0.5357132, y: -0.8839195}
+  layoutZones:
+  - {fileID: 11400000, guid: 062062d0c69f39a4980f2a67d85b2599, type: 2}
+  - {fileID: 11400000, guid: a915d15b3d056734da45c34d242b670c, type: 2}
+  - {fileID: 11400000, guid: 72dcbd0d24dac314c8d81438948f9488, type: 2}
+  - {fileID: 11400000, guid: abcfffb8f1e46214db181e0ee688f415, type: 2}
+  props:
+  - {fileID: 11400000, guid: 50462b5556262854e9a7854454f62a39, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}
