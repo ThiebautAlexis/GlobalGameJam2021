@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5a2a014640ca23429ba0d10e0a1bd93, type: 3}
-  m_Name: DAT_LayoutProps#2
+  m_Name: DAT_LayoutProps_Green
   m_EditorClassIdentifier: 
   tools:
-  - {fileID: 4141809332709297647, guid: a3fbe0f4c3f968f4dace3544d4a95c24, type: 3}
   - {fileID: 5654239720950040422, guid: 326c01f1258e7a141b91e77c87889ed3, type: 3}
+  - {fileID: 4141809332709297647, guid: a3fbe0f4c3f968f4dace3544d4a95c24, type: 3}
   props:
   - {fileID: -3126320162996227214, guid: c6e5397dedd7a4741b2a76819475c3b3, type: 3}
   - {fileID: 6980748686060233547, guid: 237961b9da2a2694f938d170be233d71, type: 3}
@@ -33,10 +33,12 @@ MonoBehaviour:
   - {fileID: 9094730415899126481, guid: 3d7567aa46d191f43b1547de579226ed, type: 3}
   lavaLakes: []
   surfacesProps:
-  - {fileID: 7405426600096464313, guid: 430f9d39c9454f14782566dc0a68a4ae, type: 3}
+  - {fileID: 5231695482320746691, guid: 07ab233e4a990584ead6831f6d67f4e2, type: 3}
+  - {fileID: 8692176371655135933, guid: 1bf6eb064cf9c67479253063421446b4, type: 3}
+  - {fileID: 2119229536721551341, guid: c4fc57276396ef84a969f9117c71f48f, type: 3}
+  - {fileID: 3491446044967965270, guid: 74415546d7fa4ba4da6b415ac32102fe, type: 3}
+  - {fileID: 8801224557949868467, guid: 0c0c5fa5d6ad9b04fbf7cf3181d73b59, type: 3}
+  - {fileID: 8962556848226670384, guid: 4f436d9da4d66934cb9159368a9a59e9, type: 3}
   - {fileID: 4347541166379344378, guid: 2ccf63fe95b33c841a66cd4ba7a65b50, type: 3}
-  - {fileID: 4363639621824608881, guid: 1f4a58b8fbd4b95418983402c0037ca2, type: 3}
-  - {fileID: 8165329240746671614, guid: 38280b4e731411a428cff942e97167bc, type: 3}
-  - {fileID: 192034024559294010, guid: 9cee8236b2a734149b791c0f4f9f5757, type: 3}
-  - {fileID: 1663626478417481904, guid: de827b8688615434b9b39bf063bd7eee, type: 3}
+  - {fileID: 7405426600096464313, guid: 430f9d39c9454f14782566dc0a68a4ae, type: 3}
   - {fileID: 1148869410709933858, guid: c38412b0ce035414c84800f1db910a23, type: 3}
