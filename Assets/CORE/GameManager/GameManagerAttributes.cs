@@ -37,6 +37,15 @@ namespace GlobalGameJam2021
         #region Content
         [HorizontalLine(1, order = 0), Section("GAME MANAGE ATTRIBUTES", order = 1), Space(order = 2)]
 
+        public float ResetGameTime = 2;
+        public float TrapOxgyenDecrease = 5;
+
+        [Space]
+
+        [Min(0)] public float TravelDistance = 200;
+
+        [HorizontalLine(1)]
+
         public AudioClip[] LootBoneClips = new AudioClip[] { };
         public AudioClip[] LootOreClips = new AudioClip[] { };
         public AudioClip LootAmberClip = null;

@@ -28,6 +28,26 @@ namespace GlobalGameJam2021
 
         #region Methods
 
+        #region Travel
+        private bool isTraveling = false;
+        private float travelVar = 0;
+        private Vector3 travelDestination = new Vector3();
+
+        // -----------------------
+
+        public void StartTravel(Vector3 _destination)
+        {
+            isTraveling = true;
+            travelDestination = new Vector3(_destination.x, _destination.y, transform.position.z);
+        }
+
+        public void StopTravel(Vector3 _distance)
+        {
+            travelDestination -= _distance;
+            transform.parent.position -= _distance;
+        }
+        #endregion
+
         #region Screenshake
         private bool isScreenshaking = false;
 
@@ -69,6 +89,17 @@ namespace GlobalGameJam2021
 
         private void Update()
         {
+            // Travel in space.
+            if (isTraveling)
+            {
+                travelVar = Mathf.Min(travelVar + Time.deltaTime, attributes.TravelSpeed[attributes.TravelSpeed.length - 1].time);
+                float _speed = attributes.TravelSpeed.Evaluate(travelVar);
+
+                transform.parent.position = Vector3.MoveTowards(transform.parent.position, travelDestination, Time.deltaTime * _speed);
+                if (transform.parent.position == travelDestination)
+                    isTraveling = false;
+            }
+
             // Screenshake thing.
             if (isScreenshaking)
             {

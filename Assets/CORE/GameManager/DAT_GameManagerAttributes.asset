@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef6f90c97e522e4d9b866dcd178a0c6, type: 3}
   m_Name: DAT_GameManagerAttributes
   m_EditorClassIdentifier: 
+  ResetGameTime: 2
+  TrapOxgyenDecrease: 5
+  TravelDistance: 25
   LootBoneClips:
   - {fileID: 8300000, guid: 58193a6a1c7e88447b89fae832e061a9, type: 3}
   - {fileID: 8300000, guid: 41c6e6b89df29d14bb9908cdb1e444a4, type: 3}

@@ -9,6 +9,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace GlobalGameJam2021
 {
@@ -20,14 +21,27 @@ namespace GlobalGameJam2021
         [HorizontalLine(1, order = 0), Section("GAME MANAGER", order = 1)]
 
         [SerializeField, Required] private GameManagerAttributes attributes = null;
+        [SerializeField, Required] private new CameraDigger camera = null;
+        [SerializeField, Required] private PlanetGenerator generator = null;
+        [SerializeField, Required] private Digger digger = null;
         [SerializeField, Required] private Animator title = null;
+
+        [Space]
+
         [SerializeField, Required] private TextMeshProUGUI scoreText = null;
+        [SerializeField, Required] private Image oxygenGauge = null;
 
         [Space]
 
         [SerializeField, Required] private AudioSource audioSource = null;
 
         [HorizontalLine(1)]
+
+        [SerializeField, ProgressBar("oxygenTank", SuperColor.Sapphire)] private float oxygen = 0;
+        [SerializeField, ReadOnly] private float oxygenTank = 0;
+        [SerializeField, ReadOnly] private bool isDrainingOxygen = false;
+
+        [Space]
 
         [SerializeField, ReadOnly] private int score = 0;
         [SerializeField, ReadOnly] private int keyItemCount = 0;
@@ -44,10 +58,57 @@ namespace GlobalGameJam2021
         #region Methods
 
         #region Level Management
+        public void CompleteLevel() => digger.CompleteLevel();
+
+        public void OnLeaveEarth(Vector2 _direction)
+        {
+            Transform _newPlanet = generator.GenerateRandomLayout();
+            _newPlanet.position = digger.transform.position + (Vector3)(_direction * attributes.TravelDistance);
+
+            camera.StartTravel(_newPlanet.position);
+        }
+
+        // -----------------------
+
         /// <summary>
         /// Reloads the whole game.
         /// </summary>
         public void ResetGame() => SceneManager.LoadScene(0, LoadSceneMode.Single);
+
+        public void FillOxygenTank(float _value)
+        {
+            isDrainingOxygen = true;
+            oxygenTank = _value;
+            oxygen = _value;
+
+            // Update UI.
+            oxygenGauge.fillAmount = 1;
+        }
+
+        public void EmptyOxygenTank() => EmptyOxygenTank(attributes.TrapOxgyenDecrease);
+
+        public void EmptyOxygenTank(float _value)
+        {
+            oxygen -= _value;
+            if (oxygen < 0)
+            {
+                isDrainingOxygen = false;
+                oxygen = 0;
+
+                // Update UI.
+                oxygenGauge.fillAmount = oxygen / oxygenTank;
+                digger.Kill();
+
+                // Restart game.
+                StartCoroutine(DoResetGame());
+            }
+        }
+
+        private IEnumerator DoResetGame()
+        {
+            yield return new WaitForSeconds(attributes.ResetGameTime);
+            ResetGame();
+        }
         #endregion
 
         #region Score
@@ -64,6 +125,8 @@ namespace GlobalGameJam2021
         public void PickupKeyItem()
         {
             keyItemCount--;
+            if (keyItemCount < 1)
+                CompleteLevel();
         }
 
         public void IncreaseKeyItemCount() => keyItemCount++;
@@ -155,6 +218,8 @@ namespace GlobalGameJam2021
         private IEnumerator Start()
         {
             // Start the game.
+            generator.GenerateRandomLayout();
+
             Time.timeScale = 0;
             scoreText.text = string.Empty;
             while (!attributes.ActionInput.triggered && !attributes.ActionAltInput.triggered)
@@ -176,6 +241,9 @@ namespace GlobalGameJam2021
 
         private void Update()
         {
+            if (isDrainingOxygen)
+                EmptyOxygenTank(Time.deltaTime);
+
             // Quit button.
             if (attributes.QuitInput.triggered)
                 Application.Quit();

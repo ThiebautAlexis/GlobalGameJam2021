@@ -15,7 +15,8 @@ namespace GlobalGameJam2021
         Spawn = 0,
         Digging,
         AboutTurn,
-        Died = 999
+        Traveling,
+        Dead = 999
     }
 
 	public class Digger : MonoBehaviour
@@ -43,6 +44,10 @@ namespace GlobalGameJam2021
 
         [Space]
 
+        [SerializeField, ReadOnly] private bool isLevelCompleted = false;
+
+        [Space]
+
         [SerializeField, ReadOnly] private bool hasPickaxe = false;
         public bool HasPickaxe => hasPickaxe;
 
@@ -57,6 +62,8 @@ namespace GlobalGameJam2021
         public readonly int state_Hash = Animator.StringToHash("State");
 
         // -----------------------
+
+        private void PlayDead() => animator.SetInteger(state_Hash, -1);
 
         private void PlayFloating() => animator.SetInteger(state_Hash, 0);
         public void PlayDigging() => animator.SetInteger(state_Hash, hasPickaxe ? 2 : 1);
@@ -108,6 +115,28 @@ namespace GlobalGameJam2021
         /// </summary>
         public void OnEnterPlanet(PlanetController _planet)
         {
+            if (state == DiggerState.Traveling || state == DiggerState.Spawn)
+                _planet.Activate();
+
+            if (state == DiggerState.Traveling)
+            {
+                isLevelCompleted = false;
+
+                PlanetController[] _planets = FindObjectsOfType<PlanetController>();
+                for (int _i = 0; _i < _planets.Length; _i++)
+                {
+                    if (_planets[_i] != _planet)
+                        Destroy(_planets[_i].gameObject);
+
+                    Vector3 _distance = _planet.transform.position;
+                    transform.position -= _distance;
+                    FindObjectOfType<CameraDigger>().StopTravel(_distance);
+
+                    _planet.transform.position = Vector3.zero;
+                }
+                // Destroy planet.
+            }
+
             speedVar = 0;
 
             isLerping = false;
@@ -130,6 +159,21 @@ namespace GlobalGameJam2021
         /// </summary>
         public void OnExitPlanet(PlanetController _planet)
         {
+            if (isLevelCompleted)
+            {
+                speedVar = 0;
+                rotationSpeedVar = 0;
+                state = DiggerState.Traveling;
+
+                PlayFloating();
+                dirtFX.Stop();
+                audioSource.Stop();
+
+                GameManager.Instance.OnLeaveEarth(movement);
+                _planet.DisablePlanet();
+                return;
+            }
+
             speedVar = 0;
             rotationSpeedVar = 0;
             state = DiggerState.AboutTurn;
@@ -178,6 +222,19 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Others
+        public void CompleteLevel() => isLevelCompleted = true;
+
+        public void Kill()
+        {
+            speedVar = 0;
+            isLerping = false;
+            rotationSpeedVar = 0;
+            state = DiggerState.Dead;
+
+            collider.enabled = false;
+            PlayDead();
+        }
+
         public void Bounce(Collider2D _collider)
         {
             ColliderDistance2D _distance = collider.Distance(_collider);
@@ -221,9 +278,22 @@ namespace GlobalGameJam2021
             Move();
         }
 
+        private void TravelMove()
+        {
+            speedVar = Mathf.Min(speedVar + Time.deltaTime, attributes.TravelingSpeed[attributes.TravelingSpeed.length - 1].time);
+            speed = attributes.TravelingSpeed.Evaluate(speedVar);
+
+            Move();
+        }
+
         private void DieMove()
         {
+            speedVar = Mathf.Min(speedVar + Time.deltaTime, attributes.DeadSpeed[attributes.DeadSpeed.length - 1].time);
+            speed = attributes.DeadSpeed.Evaluate(speedVar);
 
+            // Update position without triggering anything...
+            rigidbody.position += movement * speed * Time.deltaTime;
+            transform.position = rigidbody.position;
         }
         #endregion
 
@@ -346,7 +416,11 @@ namespace GlobalGameJam2021
                     AboutTurnMove();
                     break;
 
-                case DiggerState.Died:
+                case DiggerState.Traveling:
+                    TravelMove();
+                    break;
+
+                case DiggerState.Dead:
                     DieMove();
                     break;
 

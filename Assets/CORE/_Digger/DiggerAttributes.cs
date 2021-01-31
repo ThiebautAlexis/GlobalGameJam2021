@@ -18,6 +18,8 @@ namespace GlobalGameJam2021
         public AnimationCurve SpawnSpeed = new AnimationCurve();
         public AnimationCurve DigSpeed = new AnimationCurve();
         public AnimationCurve AboutTurnSpeed = new AnimationCurve();
+        public AnimationCurve TravelingSpeed = new AnimationCurve();
+        public AnimationCurve DeadSpeed = new AnimationCurve();
 
         [Space]
 
@@ -26,8 +28,11 @@ namespace GlobalGameJam2021
 
         [HorizontalLine(1)]
 
-        public LayerMask LayerMask = new LayerMask();
         [MinMax(-45, 45)] public Vector2 BounceRange = new Vector2(-10, 10);
+
+        [Space]
+
+        public LayerMask LayerMask = new LayerMask();
 
         [HorizontalLine(1)]
 

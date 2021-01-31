@@ -30,8 +30,6 @@ namespace GlobalGameJam2021
             Destroy(gameObject);
             return false;
         }
-
-        private void Awake() => GameManager.Instance.IncreaseKeyItemCount();
         #endregion
     }
 }

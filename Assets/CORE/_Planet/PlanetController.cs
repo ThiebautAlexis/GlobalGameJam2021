@@ -15,6 +15,7 @@ namespace GlobalGameJam2021
         [HorizontalLine(1, order = 0), Section("PLANET CONTROLLER", order = 1)]
 
         [SerializeField, Required] private PlanetControllerAttributes attributes = null;
+        [SerializeField, Range(1, 300)] private float oxygen = 0;
 
         public Vector3 Center => collider.bounds.center;
 
@@ -29,6 +30,8 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Methods
+
+        public void DisablePlanet() => collider.enabled = false;
 
         #region Trigger
         public override bool OnEnter(Digger _digger)
@@ -53,10 +56,15 @@ namespace GlobalGameJam2021
         private float speedVar = 0;
         private float resetSpeedVar = 0;
 
+        private bool isActivated = false;
+
         // -----------------------
 
         private void Update()
         {
+            if (!isActivated)
+                return;
+
             // Rotates the planet.
             float _movement = attributes.Move.ReadValue<float>();
             if (_movement != 0)
@@ -83,14 +91,20 @@ namespace GlobalGameJam2021
                 digger.Rotate(_movement);
         }
 
-        private void OnEnable()
+        private void Start()
         {
+            GameManager.Instance.FillOxygenTank(oxygen);
+        }
+
+        public void Activate()
+        {
+            isActivated = true;
             attributes.EnableInputs();
         }
 
         private void OnDisable()
         {
-            attributes.DisableInputs();
+            //attributes.DisableInputs();
         }
         #endregion
 

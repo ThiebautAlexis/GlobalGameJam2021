@@ -12,6 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c6a89d3068686449e5048b3b11e2b6, type: 3}
   m_Name: DAT_CameraDiggerAttributes
   m_EditorClassIdentifier: 
+  TravelSpeed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   ShakeForce: 25
   TraumaSoftening: 0.5
   ShakeMaxOffset: {x: 1.5, y: 1.5}

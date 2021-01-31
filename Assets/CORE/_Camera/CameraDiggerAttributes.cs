@@ -15,6 +15,10 @@ namespace GlobalGameJam2021
         #region Attributes
         [HorizontalLine(1, order = 0), Section("CAMERA DIGGER ATTRIBUTES", order = 1)]
 
+        public AnimationCurve TravelSpeed = new AnimationCurve();
+
+        [HorizontalLine(1)]
+
         [Min(0)] public float ShakeForce = .2f;
         [Min(0)] public float TraumaSoftening = .2f;
 

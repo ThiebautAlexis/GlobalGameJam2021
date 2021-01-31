@@ -6,7 +6,6 @@
 
 using EnhancedEditor;
 using UnityEngine;
-using System.Collections.Generic;
 
 namespace GlobalGameJam2021
 {
@@ -18,16 +17,10 @@ namespace GlobalGameJam2021
 		#endregion
 
 		#region Methods
-		private void Start()
-		{
-			GenerateRandomLayout();
-		}
-
-		private void GenerateRandomLayout()
+		public Transform GenerateRandomLayout()
 		{
 			int _layoutIndex = Random.Range(0, layouts.Length);
-
-			Transform _t = layouts[_layoutIndex].GenerateLayout(transform.position); 
+			return layouts[_layoutIndex].GenerateLayout(transform.position); 
 		}
 		#endregion
 	}
