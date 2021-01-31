@@ -31,7 +31,20 @@ MonoBehaviour:
   - {fileID: 9090301385134502441, guid: 8950382e388b83347bbf430cb0e7fc40, type: 3}
   - {fileID: -8744915919340212649, guid: cf8e243a4a44b5d4ba7e965b2760c5cd, type: 3}
   - {fileID: -8236889631923297657, guid: cffb210e242cacc43b693062b295b06a, type: 3}
-  lavaLakes: []
+  lavaLakes:
+  - {fileID: 8686068470451732971, guid: 3ecc24daf50318b439f856ca1aa9343c, type: 3}
+  - {fileID: 3437990107973648855, guid: af8259e7926a52d46a870d4e7860eff3, type: 3}
+  - {fileID: 5037814910135928686, guid: 35b7747d7ffbca347a002dd7835af08a, type: 3}
+  - {fileID: 933198033433044423, guid: 46d7c64cfecd74c488ad5d8e52f80a21, type: 3}
+  - {fileID: 1173327261876077138, guid: cc7303c0860b40f41a97c6709b0b93ff, type: 3}
+  - {fileID: 2153273935202515013, guid: 723e624b8490da940a659724d6bb1f5f, type: 3}
+  - {fileID: 6856299895151331283, guid: 8deea63b648cc9a47baebd947ae1c6ba, type: 3}
+  - {fileID: 2547044883954626360, guid: 61fbf529317b16443a7a4b5b51fe4856, type: 3}
+  - {fileID: 1703241013738972645, guid: 1cd3664d69f7f1f458eeae473c377963, type: 3}
+  - {fileID: 3592142858200093557, guid: 22bfa0e560c0aba44bd3944236aadf69, type: 3}
+  - {fileID: 7469656998865570971, guid: a15aed30c44720e45b52be2b51d83d1f, type: 3}
+  - {fileID: 613570424660748994, guid: 2b060defc9295c3429905b160fd433ad, type: 3}
+  - {fileID: 6152957172616286612, guid: 97edd2e6b6ec2434e8267c3eed6f02a6, type: 3}
   surfacesProps:
   - {fileID: 7405426600096464313, guid: 430f9d39c9454f14782566dc0a68a4ae, type: 3}
   - {fileID: 4347541166379344378, guid: 2ccf63fe95b33c841a66cd4ba7a65b50, type: 3}
