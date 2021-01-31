@@ -17,10 +17,11 @@ namespace GlobalGameJam2021
         [SerializeField] private Trigger[] tools = new Trigger[] { };
         [SerializeField] private Trigger[] props = new Trigger[] { };
         [SerializeField] private Trigger[] lavaLakes = new Trigger[] { };
-
+        [SerializeField] private Trigger[] surfacesProps = new Trigger[] { }; 
         public Trigger[] Tools => tools;
         public Trigger[] Props => props;
         public Trigger[] LavaLakes => lavaLakes; 
+        public Trigger[] SurfacesProps => surfacesProps; 
         #endregion
     }
 }
