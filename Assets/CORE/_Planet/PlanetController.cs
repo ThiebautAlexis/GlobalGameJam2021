@@ -67,7 +67,7 @@ namespace GlobalGameJam2021
                 speed = attributes.RotationSpeed.Evaluate(speedVar);
 
                 _movement *= Time.deltaTime * speed;
-                transform.RotateAround(collider.bounds.center, Vector3.forward, _movement * Time.deltaTime * speed);
+                transform.RotateAround(collider.bounds.center, Vector3.forward, _movement);
             }
             else if (speed != 0)
             {

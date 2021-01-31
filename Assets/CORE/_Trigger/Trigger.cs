@@ -20,6 +20,8 @@ namespace GlobalGameJam2021
         #region Methods
         public abstract bool OnEnter(Digger _digger);
 
+        public virtual void OnUpdate(Digger _digger) { }
+
         public virtual bool OnExit(Digger _digger) => false;
 
         public bool Compare(Trigger _trigger) => GetInstanceID() == _trigger.GetInstanceID();
