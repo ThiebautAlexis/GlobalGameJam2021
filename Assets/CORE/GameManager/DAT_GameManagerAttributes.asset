@@ -12,6 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef6f90c97e522e4d9b866dcd178a0c6, type: 3}
   m_Name: DAT_GameManagerAttributes
   m_EditorClassIdentifier: 
+  ActionAltInput:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: /*/<button>
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
   ActionInput:
     m_Name: Action Input
     m_Type: 0
@@ -23,6 +39,14 @@ MonoBehaviour:
     - m_Name: 
       m_Id: 5c818971-cd0b-429c-9009-ed043aab75af
       m_Path: <Keyboard>/anyKey
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Action Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 347711b5-8a75-4077-83bc-728b42251c01
+      m_Path: 
       m_Interactions: 
       m_Processors: 
       m_Groups: 

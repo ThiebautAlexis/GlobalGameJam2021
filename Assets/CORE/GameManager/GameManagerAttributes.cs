@@ -16,6 +16,7 @@ namespace GlobalGameJam2021
         #region Content
         [HorizontalLine(1, order = 0), Section("GAME MANAGE ATTRIBUTES", order = 1), Space(order = 2)]
 
+        [HideInInspector] public InputAction ActionAltInput = new InputAction();
         public InputAction ActionInput = new InputAction();
         public InputAction QuitInput = new InputAction();
         #endregion
@@ -23,12 +24,16 @@ namespace GlobalGameJam2021
         #region Methods
         public void EnableInputs()
         {
+            ActionAltInput = new InputAction(binding: "/*/<button>");
+
+            ActionAltInput.Enable();
             ActionInput.Enable();
             QuitInput.Enable();
         }
 
         public void DisableInputs()
         {
+            ActionAltInput.Disable();
             ActionInput.Disable();
             QuitInput.Disable();
         }

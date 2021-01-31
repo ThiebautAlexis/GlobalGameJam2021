@@ -73,7 +73,7 @@ namespace GlobalGameJam2021
             }
 
             rotationSpeedVar = Mathf.Min(rotationSpeedVar + Time.deltaTime, attributes.RotationSpeed[attributes.RotationSpeed.length - 1].time);
-            rotationSpeed = attributes.RotationSpeed.Evaluate(rotationSpeedVar) * _speed;
+            rotationSpeed = attributes.RotationSpeed.Evaluate(rotationSpeedVar) * -_speed;
 
             transform.Rotate(Vector3.forward, rotationSpeed);
 
@@ -98,7 +98,7 @@ namespace GlobalGameJam2021
             isLerping = false;
             state = DiggerState.Digging;
 
-            CameraDigger.Instance.Shake(.5f);
+            CameraDigger.Instance.Shake(attributes.DiggingInShake);
         }
 
         /// <summary>
@@ -107,7 +107,10 @@ namespace GlobalGameJam2021
         public void OnExitPlanet(PlanetController _planet)
         {
             speedVar = 0;
+            rotationSpeedVar = 0;
             state = DiggerState.AboutTurn;
+
+            CameraDigger.Instance.Shake(attributes.DiggingOutShake, true);
 
             // Start lerping rotation.
             isLerping = true;
@@ -163,6 +166,7 @@ namespace GlobalGameJam2021
             speedVar = Mathf.Min(speedVar + Time.deltaTime, attributes.DigSpeed[attributes.DigSpeed.length - 1].time);
             speed = attributes.DigSpeed.Evaluate(speedVar);
 
+            CameraDigger.Instance.Vibrate();
             Move();
         }
 
