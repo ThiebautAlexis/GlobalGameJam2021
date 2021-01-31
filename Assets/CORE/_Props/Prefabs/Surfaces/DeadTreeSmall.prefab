@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2831187754117557600, guid: d4d1e52da8087cc4c95dd4b07e56b6e3,
+        type: 3}
+      propertyPath: doBounce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2831187754117557601, guid: d4d1e52da8087cc4c95dd4b07e56b6e3,
         type: 3}
       propertyPath: m_Size.x

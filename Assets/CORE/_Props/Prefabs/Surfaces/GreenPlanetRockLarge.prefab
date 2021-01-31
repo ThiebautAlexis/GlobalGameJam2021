@@ -73,5 +73,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenPlanetRockLarge
       objectReference: {fileID: 0}
+    - target: {fileID: 8801224557949868467, guid: 0c0c5fa5d6ad9b04fbf7cf3181d73b59,
+        type: 3}
+      propertyPath: doBounce
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c0c5fa5d6ad9b04fbf7cf3181d73b59, type: 3}

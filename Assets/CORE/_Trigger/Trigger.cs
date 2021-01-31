@@ -25,6 +25,12 @@ namespace GlobalGameJam2021
         public virtual bool OnExit(Digger _digger) => false;
 
         public bool Compare(Trigger _trigger) => GetInstanceID() == _trigger.GetInstanceID();
+
+        private void Awake()
+        {
+            if (!collider)
+                collider = GetComponent<Collider2D>();
+        }
         #endregion
     }
 }

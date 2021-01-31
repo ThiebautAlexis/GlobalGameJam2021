@@ -18,6 +18,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -106356631378558546, guid: f441ab72e0869cd43ba02c72b2fdaca1,
         type: 3}
+    - target: {fileID: 1148869410709933858, guid: c38412b0ce035414c84800f1db910a23,
+        type: 3}
+      propertyPath: doBounce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1148869410709933859, guid: c38412b0ce035414c84800f1db910a23,
         type: 3}
       propertyPath: m_Size.x

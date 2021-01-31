@@ -4,14 +4,22 @@
 //
 // ====================================================================================== //
 
+using EnhancedEditor;
+using UnityEngine;
+
 namespace GlobalGameJam2021
 {
 	public class BouncingObject : Trigger
     {
         #region Content
+        [HorizontalLine(1, order = 0), Section("BOUCNING ITEM", order = 1)]
+
+        [SerializeField] private bool doBounce = false;
+
         public override bool OnEnter(Digger _digger)
         {
-            _digger.Bounce(collider);
+            if (doBounce)
+                _digger.Bounce(collider);
             return true;
         }
         #endregion

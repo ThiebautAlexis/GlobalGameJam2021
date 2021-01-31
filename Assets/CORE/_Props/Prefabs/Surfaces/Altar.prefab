@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 0}
+  doBounce: 1
 --- !u!61 &7405426600096464312
 BoxCollider2D:
   m_ObjectHideFlags: 0

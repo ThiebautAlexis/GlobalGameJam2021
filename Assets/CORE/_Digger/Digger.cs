@@ -252,6 +252,9 @@ namespace GlobalGameJam2021
 
         public void Bounce(Collider2D _collider)
         {
+            if (state != DiggerState.Digging)
+                return;
+
             ColliderDistance2D _distance = collider.Distance(_collider);
             float _angle = Random.Range(attributes.BounceRange.x, attributes.BounceRange.y);
             movement = Quaternion.AngleAxis(_angle, Vector3.forward) * _distance.normal;

@@ -9,22 +9,15 @@ using UnityEngine;
 
 namespace GlobalGameJam2021
 {
-	public class SurfaceItem : Trigger
+	public class SurfaceItem : BouncingObject
 	{
-		#region Fields / Properties
-		//[HorizontalLine(1, order = 0), Section("SurfaceItem", order = 1)]
-		#endregion
-
 		#region Methods
 		private void Start()
 		{
 			float _value = Random.Range(.3f, .65f);
 			transform.localScale = new Vector3(_value, _value, 1);	
 		}
-		public override bool OnEnter(Digger _digger)
-		{
-			return false;
-		}
+		public override bool OnEnter(Digger _digger) => base.OnEnter(_digger);
 		#endregion
 
 	}

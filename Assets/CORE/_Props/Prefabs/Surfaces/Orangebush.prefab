@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8962556848226670384, guid: 4f436d9da4d66934cb9159368a9a59e9,
+        type: 3}
+      propertyPath: doBounce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8962556848226670385, guid: 4f436d9da4d66934cb9159368a9a59e9,
         type: 3}
       propertyPath: m_Size.x

@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 2119229536721551341, guid: c4fc57276396ef84a969f9117c71f48f,
+        type: 3}
+      propertyPath: doBounce
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2119229536721551346, guid: c4fc57276396ef84a969f9117c71f48f,
         type: 3}
       propertyPath: m_RootOrder
