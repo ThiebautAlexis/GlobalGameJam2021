@@ -23,17 +23,17 @@ MonoBehaviour:
     startTangent: {x: 0.8584943, y: 0.57055354}
     endTangent: {x: -1.2828002, y: 0.09440851}
   - start: {x: -4.914329, y: -0.29678977}
-    end: {x: -3.204699, y: 3.0349329}
+    end: {x: -3.2744093, y: 3.069788}
     startTangent: {x: 0.1773572, y: 1.2062817}
-    endTangent: {x: -1.0557542, y: -0.58672786}
+    endTangent: {x: -0.8989053, y: -0.6912937}
   - start: {x: -1.572079, y: -4.4169364}
     end: {x: -4.6982822, y: -1.5316893}
-    startTangent: {x: -1.7291071, y: 0.63899684}
+    startTangent: {x: -1.3893311, y: 0.31228828}
     endTangent: {x: 0.1835494, y: -1.3176218}
   - start: {x: 4.6897106, y: -1.4547234}
-    end: {x: 0.33721662, y: -4.344059}
+    end: {x: 0.31978893, y: -4.378915}
     startTangent: {x: -0.5945978, y: -1.3593366}
-    endTangent: {x: 2.2137055, y: 0.13981915}
+    endTangent: {x: 2.143995, y: 0.24438477}
   layoutZones:
   - {fileID: 11400000, guid: b688ed2c581ae9f43a27110568cc440e, type: 2}
   props:
