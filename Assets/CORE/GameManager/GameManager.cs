@@ -73,7 +73,7 @@ namespace GlobalGameJam2021
             // Start the game.
             Time.timeScale = 0;
             scoreText.text = string.Empty;
-            while (!attributes.ActionInput.triggered)
+            while (!attributes.ActionInput.triggered && !attributes.ActionAltInput.triggered)
                 yield return null;
 
             Time.timeScale = 1;

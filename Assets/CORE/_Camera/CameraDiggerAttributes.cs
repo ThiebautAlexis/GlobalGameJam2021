@@ -18,10 +18,19 @@ namespace GlobalGameJam2021
         [Min(0)] public float ShakeForce = .2f;
         [Min(0)] public float TraumaSoftening = .2f;
 
-        [HorizontalLine(1)]
+        [Space]
 
         public Vector2 ShakeMaxOffset = Vector2.one;
         [Range(0, 90)] public int ShakeMaxAngle = 5;
+
+        [HorizontalLine(1)]
+
+        [Range(0, 1)] public float Vibration = .01f;
+
+        [Min(0)] public float VibrationForce = .2f;
+
+        public Vector2 VibrationMaxOffset = Vector2.one;
+        [Range(0, 90)] public int VibrationMaxAngle = 5;
         #endregion
     }
 }

@@ -51,6 +51,7 @@ namespace GlobalGameJam2021
 
         #region Monobehaviour
         private float speedVar = 0;
+        private float resetSpeedVar = 0;
 
         // -----------------------
 
@@ -60,16 +61,22 @@ namespace GlobalGameJam2021
             float _movement = attributes.Move.ReadValue<float>();
             if (_movement != 0)
             {
+                resetSpeedVar = 0;
+
                 speedVar = Mathf.Min(speedVar + Time.deltaTime, attributes.RotationSpeed[attributes.RotationSpeed.length - 1].time);
                 speed = attributes.RotationSpeed.Evaluate(speedVar);
 
                 _movement *= Time.deltaTime * speed;
                 transform.RotateAround(collider.bounds.center, Vector3.forward, _movement * Time.deltaTime * speed);
             }
-            else
+            else if (speed != 0)
             {
-                speedVar = 0;
-                speed = 0;
+                resetSpeedVar += Time.deltaTime;
+                if (resetSpeedVar > attributes.resetSpeedTime)
+                {
+                    speedVar = 0;
+                    speed = 0;
+                }
             }
 
             if (hasDigger)

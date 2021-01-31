@@ -20,6 +20,10 @@ namespace GlobalGameJam2021
 
         [HorizontalLine(1)]
 
+        public float resetSpeedTime = .5f;
+
+        [HorizontalLine(1)]
+
         public InputAction Move = new InputAction();
         #endregion
 

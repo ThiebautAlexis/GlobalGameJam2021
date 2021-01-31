@@ -31,16 +31,36 @@ namespace GlobalGameJam2021
         #region Screenshake
         private bool isScreenshaking = false;
 
+        private float force = 0;
+        private int maxAngle = 0;
+        private Vector2 maxOffset = new Vector2();
+
         // -----------------------
 
         /// <summary>
         /// Use this to shake the camera.
         /// </summary>
         /// <param name="_trauma">Shake related value, kept between 0 and 1.</param>
-        public void Shake(float _trauma)
+        public void Shake(float _trauma, bool _forceReset = false)
         {
-            trauma = Mathf.Clamp01(trauma + _trauma);
+            trauma = Mathf.Clamp01((_forceReset ? 0 : trauma) + _trauma);
             isScreenshaking = true;
+
+            force = attributes.ShakeForce;
+            maxAngle = attributes.ShakeMaxAngle;
+            maxOffset = attributes.ShakeMaxOffset;
+        }
+
+        public void Vibrate()
+        {
+            isScreenshaking = true;
+
+            if (trauma < attributes.Vibration)
+                trauma = attributes.Vibration;
+
+            force = attributes.VibrationForce;
+            maxAngle = attributes.VibrationMaxAngle;
+            maxOffset = attributes.VibrationMaxOffset;
         }
         #endregion
 
@@ -54,9 +74,9 @@ namespace GlobalGameJam2021
             {
                 float _trauma = Mathf.Pow(trauma, 2);
 
-                float _angle = attributes.ShakeMaxAngle * _trauma * ((Mathf.PerlinNoise(0, Time.time * attributes.ShakeForce) * 2) - 1);
-                float _offsetX = attributes.ShakeMaxOffset.x * _trauma * ((Mathf.PerlinNoise(1, Time.time * attributes.ShakeForce) * 2) - 1);
-                float _offsetY = attributes.ShakeMaxOffset.y * _trauma * ((Mathf.PerlinNoise(2, Time.time * attributes.ShakeForce) * 2) - 1);
+                float _angle = maxAngle * _trauma * ((Mathf.PerlinNoise(0, Time.time * attributes.ShakeForce) * 2) - 1);
+                float _offsetX = maxOffset.x * _trauma * ((Mathf.PerlinNoise(1, Time.time * attributes.ShakeForce) * 2) - 1);
+                float _offsetY = maxOffset.y * _trauma * ((Mathf.PerlinNoise(2, Time.time * attributes.ShakeForce) * 2) - 1);
 
                 camera.transform.localEulerAngles = new Vector3(0, 0, _angle);
                 camera.transform.localPosition = new Vector3(_offsetX, _offsetY, 0);
