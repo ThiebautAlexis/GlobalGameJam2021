@@ -67,6 +67,11 @@ namespace GlobalGameJam2021
         #region Methods
 
         #region Level Management
+        private Transform actualPlanet = null;
+        private GameObject planetToDestroy = null;
+
+        // -----------------------
+
         public void CompleteLevel()
         {
             digger.CompleteLevel();
@@ -75,11 +80,15 @@ namespace GlobalGameJam2021
 
         public void OnLeaveEarth(Vector2 _direction)
         {
-            Transform _newPlanet = generator.GenerateRandomLayout();
-            _newPlanet.position = digger.transform.position + (Vector3)(_direction * attributes.TravelDistance);
+            planetToDestroy = actualPlanet.gameObject;
 
-            camera.StartTravel(_newPlanet.position);
+            actualPlanet = generator.GenerateRandomLayout();
+            actualPlanet.position = digger.transform.position + (Vector3)(_direction * attributes.TravelDistance);
+
+            camera.StartTravel(actualPlanet.position);
         }
+
+        public void DestroyPreviousPlanet() => Destroy(planetToDestroy);
 
         // -----------------------
 
@@ -247,7 +256,7 @@ namespace GlobalGameJam2021
         private IEnumerator Start()
         {
             // Start the game.
-            generator.GenerateRandomLayout();
+            actualPlanet = generator.GenerateRandomLayout();
 
             Time.timeScale = 0;
             scoreText.text = string.Empty;

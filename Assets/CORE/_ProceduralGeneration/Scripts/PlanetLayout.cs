@@ -73,6 +73,9 @@ namespace GlobalGameJam2021
             // First of all, we need to instanciate the main objects (tools, etc...)
             for (int i = 0; i < _props.Tools.Length; i++)
             {
+                if (_positions.Count == 0)
+                    break;
+
                 _index = Random.Range(0,_positions.Count);
                 Instantiate(_props.Tools[i], _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
                 _positions.RemoveAt(_index); 
@@ -80,11 +83,15 @@ namespace GlobalGameJam2021
             float _value; 
             for (int i = 0; i < _options.MaxLavaCount; i++)
             {
+                if (_positions.Count == 0)
+                    break;
+
                 _value = Random.value;
                 if (_value <= _options.LavaProbability)
                 {
                     _index = Random.Range(0, _props.LavaLakes.Length);
                     _anchorIndex = Random.Range(0, _positions.Count);
+
                     Instantiate(_props.LavaLakes[_index], _positions[_anchorIndex], Quaternion.Euler(0, 0, Random.value * 360), _t);
                     _positions.RemoveAt(_anchorIndex); 
                 }

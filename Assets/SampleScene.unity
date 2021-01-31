@@ -849,9 +849,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d3a397e94c6abee4ebb8c24c4cdf3870, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2368,51 +2368,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1427644919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1427644921}
-  - component: {fileID: 1427644920}
-  m_Layer: 0
-  m_Name: Debug Generator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1427644920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427644919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6e12cc302f13d54e8ae7d5bac796755, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layouts:
-  - {fileID: 11400000, guid: ae57c6ad0604a0d44a8355d46e8d3efe, type: 2}
---- !u!4 &1427644921
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427644919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1437870014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,21 +3354,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Digger
-      objectReference: {fileID: 0}
-    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
-        type: 3}
-      propertyPath: m_BackSortingOrder
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
-        type: 3}
-      propertyPath: m_FrontSortingOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
-        type: 3}
-      propertyPath: m_IsCustomRangeActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 765553efd7d3ef04781020d8ffe58d67, type: 3}

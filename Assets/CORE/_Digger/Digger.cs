@@ -131,19 +131,13 @@ namespace GlobalGameJam2021
                 _planet.Activate();
 
                 CameraDigger.Instance.Shake(attributes.DiggingInShake);
+                GameManager.Instance.DestroyPreviousPlanet();
 
-                PlanetController[] _planets = FindObjectsOfType<PlanetController>();
-                for (int _i = 0; _i < _planets.Length; _i++)
-                {
-                    if (_planets[_i] != _planet)
-                        Destroy(_planets[_i].gameObject);
+                Vector3 _distance = _planet.transform.position;
+                CameraDigger.Instance.StopTravel(_distance);
 
-                    Vector3 _distance = _planet.transform.position;
-                    transform.position -= _distance;
-                    FindObjectOfType<CameraDigger>().StopTravel(_distance);
-
-                    _planet.transform.position = Vector3.zero;
-                }
+                transform.position -= _distance;
+                _planet.transform.position = Vector3.zero;
             }
             else
                 CameraDigger.Instance.Shake(attributes.DiggingInShake);
@@ -252,7 +246,7 @@ namespace GlobalGameJam2021
 
         public void Bounce(Collider2D _collider)
         {
-            if (state != DiggerState.Digging)
+            if (isLevelCompleted)
                 return;
 
             ColliderDistance2D _distance = collider.Distance(_collider);
