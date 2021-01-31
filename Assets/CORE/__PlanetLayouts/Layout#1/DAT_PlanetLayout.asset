@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
   m_Name: DAT_PlanetLayout
   m_EditorClassIdentifier: 
-  planet: {fileID: 5684494150031584376, guid: 465ce3dc81ad52a4facf2fc0f53fe6a1, type: 3}
+  planet: {fileID: 2102228742237931552, guid: 6af62e99da2e19b4f84cf63bc1cc2c04, type: 3}
   surfacesArches:
   - start: {x: 0.784522, y: 4.3803554}
     end: {x: 4.5602694, y: 1.1731567}
@@ -38,13 +38,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b688ed2c581ae9f43a27110568cc440e, type: 2}
   props:
   - {fileID: 11400000, guid: a07ab945a364f40438477934032b2ad9, type: 2}
-  surfaceProps:
-  - {fileID: -5525316411550033709, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: -106356631378558546, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: -3670956624404410848, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: 8266987988355086014, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: -7155130942464873972, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: 8635446644642478407, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
-  - {fileID: 4736015148949321148, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
   options:
   - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

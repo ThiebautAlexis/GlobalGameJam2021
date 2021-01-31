@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: -8971428236360996131
     second: ObsiSimpl
+  - first:
+      213: 2855262830611741537
+    second: Space_coffee_powerup
+  - first:
+      213: 7255795700507229525
+    second: Pickaxe_Powerup
+  - first:
+      213: -1983119333072426617
+    second: Pants_powerup
+  - first:
+      213: 3339622975782550402
+    second: lantern_powerup
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1010,7 +1022,7 @@ TextureImporter:
         width: 366
         height: 360
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1031,7 +1043,7 @@ TextureImporter:
         width: 122
         height: 238
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1052,7 +1064,7 @@ TextureImporter:
         width: 129
         height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1073,7 +1085,7 @@ TextureImporter:
         width: 81
         height: 86
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1081,6 +1093,90 @@ TextureImporter:
       bones: []
       spriteID: dda2bcb3d851f7380800000000000000
       internalID: -8971428236360996131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Space_coffee_powerup
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 2050
+        width: 90
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b3df6aa6eef9720800000000000000
+      internalID: 2855262830611741537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pickaxe_Powerup
+      rect:
+        serializedVersion: 2
+        x: 3761
+        y: 1992
+        width: 211
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d3a8b2fb3c1b460800000000000000
+      internalID: 7255795700507229525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pants_powerup
+      rect:
+        serializedVersion: 2
+        x: 4118
+        y: 2055
+        width: 150
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 789220d397b8a74e0800000000000000
+      internalID: -1983119333072426617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_powerup
+      rect:
+        serializedVersion: 2
+        x: 4410
+        y: 2057
+        width: 110
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b70430769b85e20800000000000000
+      internalID: 3339622975782550402
       vertices: []
       indices: 
       edges: []
