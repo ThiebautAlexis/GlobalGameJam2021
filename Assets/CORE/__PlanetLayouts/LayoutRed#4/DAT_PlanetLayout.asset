@@ -30,6 +30,10 @@ MonoBehaviour:
     end: {x: -4.77931, y: -2.9550753}
     startTangent: {x: -0.44376183, y: -0.64770085}
     endTangent: {x: -0.37360573, y: 0.8551662}
-  layoutZones: []
-  props: []
-  options: []
+  layoutZones:
+  - {fileID: 11400000, guid: 6696c6107a10e9b498f3a74ebb8ae6e7, type: 2}
+  - {fileID: 11400000, guid: ba25e1cef60ed7c4babccec7ad51fcce, type: 2}
+  props:
+  - {fileID: 11400000, guid: 164f11aa722d7f842bb2cdcc4cb42a37, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -552,7 +552,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layouts:
+  - {fileID: 11400000, guid: ae57c6ad0604a0d44a8355d46e8d3efe, type: 2}
+  - {fileID: 11400000, guid: 5b82ce64fbd3b5e44a207b534aebe353, type: 2}
+  - {fileID: 11400000, guid: 593b62b0382d7d84c8d0741c5b0e9d78, type: 2}
+  - {fileID: 11400000, guid: 1b5146675a859a64d98c22d1cf4a0f5b, type: 2}
+  - {fileID: 11400000, guid: 2094834d113248b468dc022d7ac93a74, type: 2}
   - {fileID: 11400000, guid: 37072897499eda643a4884a5049b3450, type: 2}
+  - {fileID: 11400000, guid: 8e5fc0427c10fd840842d7d872e56906, type: 2}
+  - {fileID: 11400000, guid: 404846194d4ec4e42a45213b784bf654, type: 2}
+  - {fileID: 11400000, guid: f23c66149db037448866d254811850bb, type: 2}
+  - {fileID: 11400000, guid: 8bdb843c61f30a74d8d90efb9ae84c45, type: 2}
+  - {fileID: 11400000, guid: e0ef1d319f9f44b45ac516116a02e263, type: 2}
+  - {fileID: 11400000, guid: a99e4790368a57f4bab2f3fa016d72e0, type: 2}
+  - {fileID: 11400000, guid: 599cf3c890822e544ba3d169dd77217d, type: 2}
 --- !u!1 &302309551
 GameObject:
   m_ObjectHideFlags: 0
