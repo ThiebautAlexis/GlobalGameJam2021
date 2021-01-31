@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DAT_GameManagerAttributes
   m_EditorClassIdentifier: 
   ResetGameTime: 2
-  TrapOxgyenDecrease: 5
+  TrapOxgyenDecrease: 3
   TravelDistance: 25
   LootBoneClips:
   - {fileID: 8300000, guid: 58193a6a1c7e88447b89fae832e061a9, type: 3}
@@ -27,6 +27,8 @@ MonoBehaviour:
   LootGenericFX: {fileID: 5045160288217552832, guid: 03b74879184f02342a7ce6aa3b40148f,
     type: 3}
   LootAmberFX: {fileID: 3888113838223733654, guid: 4c0160a261db6c44f8f49dc5d89954bf,
+    type: 3}
+  LootSparkleFX: {fileID: 5833897945311383022, guid: e78959f253046514bbbb3e39f3bd912c,
     type: 3}
   LootCyanOreFX: {fileID: 2348033671019227873, guid: 3600c31781daa2b48a5ca40572fa6e64,
     type: 3}

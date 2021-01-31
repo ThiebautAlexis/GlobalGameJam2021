@@ -20,7 +20,7 @@ namespace GlobalGameJam2021
 
         public override bool OnEnter(Digger _digger)
         {
-            GameManager.Instance.PickupKeyItem();
+            GameManager.Instance.PickupKeyItem(transform.position);
             _digger.PickupKeyItem(ItemType);
 
             return base.OnEnter(_digger);

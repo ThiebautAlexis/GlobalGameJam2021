@@ -189,15 +189,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.29903534
       value: 0.01940918
-      inSlope: 0.25258896
-      outSlope: 0.25258896
+      inSlope: 0.25878903
+      outSlope: 0.25878903
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.30736387
-      value: 4.8908157
+      time: 0.3
+      value: 1000
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -216,6 +216,7 @@ MonoBehaviour:
   DiggingOutShake: 0.15
   LightOriginalSize: 10
   LightExtendedSize: 20
+  LightLerpSpeed: 10
   DigFX: {fileID: 3927844079346959721, guid: fbb34e09bd3f4904fba294a8a4a7ca24, type: 3}
   DigInClips:
   - {fileID: 8300000, guid: 35f53bd1a3d75094abd0d1c9465b74b7, type: 3}

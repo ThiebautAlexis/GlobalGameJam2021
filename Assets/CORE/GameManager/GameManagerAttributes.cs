@@ -54,6 +54,7 @@ namespace GlobalGameJam2021
 
         public GameObject LootGenericFX = null;
         public GameObject LootAmberFX = null;
+        public GameObject LootSparkleFX = null;
 
         [Space]
 

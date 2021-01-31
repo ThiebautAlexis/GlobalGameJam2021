@@ -201,7 +201,7 @@ namespace GlobalGameJam2021
             isLerping = true;
             rotationLerpVar = 0;
 
-            Vector2 _direction = -(transform.position - _planet.Center).normalized;
+            Vector2 _direction = -transform.position.normalized;
             float _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
 
             rotationLerpTo = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
@@ -410,7 +410,7 @@ namespace GlobalGameJam2021
                 rotationLerpVar = Mathf.Min(rotationLerpVar + Time.deltaTime, attributes.RotationLerpSpeed[attributes.RotationLerpSpeed.length - 1].time);
                 rotationLerpSpeed = attributes.RotationLerpSpeed.Evaluate(rotationLerpVar);
 
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationLerpTo, rotationLerpSpeed);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationLerpTo, rotationLerpSpeed * Time.deltaTime);
                 if (transform.rotation == rotationLerpTo)
                     isLerping = false;
 

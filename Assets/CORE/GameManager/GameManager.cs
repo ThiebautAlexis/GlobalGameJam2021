@@ -33,8 +33,10 @@ namespace GlobalGameJam2021
         [Space]
 
         [SerializeField, Required] private TextMeshProUGUI scoreText = null;
+        [SerializeField, Required] private TextMeshProUGUI oxygenText = null;
         [SerializeField, Required] private Image oxygenGauge = null;
         [SerializeField, Required] private Image deathScreen = null;
+        [SerializeField, Required] private GameObject tuto = null;
 
         [Space]
 
@@ -65,7 +67,11 @@ namespace GlobalGameJam2021
         #region Methods
 
         #region Level Management
-        public void CompleteLevel() => digger.CompleteLevel();
+        public void CompleteLevel()
+        {
+            digger.CompleteLevel();
+            tuto.SetActive(false);
+        }
 
         public void OnLeaveEarth(Vector2 _direction)
         {
@@ -87,6 +93,7 @@ namespace GlobalGameJam2021
             isDrainingOxygen = true;
             oxygenTank = _value;
             oxygen = _value;
+            oxygenText.text = "100%";
 
             // Update UI.
             oxygenGauge.fillAmount = 1;
@@ -98,6 +105,7 @@ namespace GlobalGameJam2021
         {
             oxygen -= _value;
             oxygenGauge.fillAmount = oxygen / oxygenTank;
+            oxygenText.text = (int)((oxygen / oxygenTank) * 100) + "%";
 
             if (oxygen < 0)
             {
@@ -141,8 +149,10 @@ namespace GlobalGameJam2021
             PlayScoreIncrease();
         }
 
-        public void PickupKeyItem()
+        public void PickupKeyItem(Vector3 _position)
         {
+            Instantiate(attributes.LootSparkleFX, _position, Quaternion.identity);
+
             keyItemCount--;
             if (keyItemCount < 1)
                 CompleteLevel();

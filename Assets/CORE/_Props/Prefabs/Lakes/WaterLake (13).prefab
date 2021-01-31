@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 38517687669844174}
-  doBounce: 0
+  doBounce: 1
 --- !u!60 &38517687669844174
 PolygonCollider2D:
   m_ObjectHideFlags: 0
