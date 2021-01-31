@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5684494150031584377}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Border
+  m_TagString: Piercer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,8 +160,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 504ce229dedb2244abb538885e54cbe0, type: 3}
+  m_SortingOrder: -2
+  m_Sprite: {fileID: 21300000, guid: 9d5fbdb9ee022b6468f81b72276b0795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
