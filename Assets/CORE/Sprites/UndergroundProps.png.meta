@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 892fcb941a7c2d64e911021f5a639b78
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3431295313716838876
+    second: ObsiRing
+  - first:
+      213: 5952409280949787133
+    second: ObsiArcLeft
+  - first:
+      213: 4105014370238953408
+    second: ObsiArcRight
+  - first:
+      213: -8971428236360996131
+    second: ObsiSimpl
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -985,6 +997,90 @@ TextureImporter:
       bones: []
       spriteID: fb9684b3262c13000800000000000000
       internalID: 14006001016007103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObsiRing
+      rect:
+        serializedVersion: 2
+        x: 3486
+        y: 2342
+        width: 366
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd10e8578e86e9f20800000000000000
+      internalID: 3431295313716838876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObsiArcLeft
+      rect:
+        serializedVersion: 2
+        x: 3974
+        y: 2398
+        width: 122
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df910cc24b43b9250800000000000000
+      internalID: 5952409280949787133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObsiArcRight
+      rect:
+        serializedVersion: 2
+        x: 4221
+        y: 2392
+        width: 129
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c777f702d0f7f830800000000000000
+      internalID: 4105014370238953408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ObsiSimpl
+      rect:
+        serializedVersion: 2
+        x: 4460
+        y: 2478
+        width: 81
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda2bcb3d851f7380800000000000000
+      internalID: -8971428236360996131
       vertices: []
       indices: 
       edges: []
