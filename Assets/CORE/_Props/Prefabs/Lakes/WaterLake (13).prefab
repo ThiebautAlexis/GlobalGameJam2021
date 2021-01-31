@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6152957172616286612}
   - component: {fileID: 38517687669844174}
   m_Layer: 0
-  m_Name: WaterLake
+  m_Name: WaterLake (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1212751627
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 4738205327459066930, guid: a52191df367975f4f90d8e9d060cb561,
     type: 3}
@@ -128,13 +128,13 @@ SpriteMask:
   m_Sprite: {fileID: 4738205327459066930, guid: a52191df367975f4f90d8e9d060cb561,
     type: 3}
   m_MaskAlphaCutoff: 0.507
-  m_FrontSortingLayerID: 0
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 0
-  m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
-  m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_FrontSortingLayerID: 1212751627
+  m_BackSortingLayerID: 1212751627
+  m_FrontSortingLayer: 1
+  m_BackSortingLayer: 1
+  m_FrontSortingOrder: 10
+  m_BackSortingOrder: -10
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
 --- !u!114 &6152957172616286612
 MonoBehaviour:
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 38517687669844174}
+  doBounce: 0
 --- !u!60 &38517687669844174
 PolygonCollider2D:
   m_ObjectHideFlags: 0

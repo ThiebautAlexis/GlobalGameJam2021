@@ -697,9 +697,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d3a397e94c6abee4ebb8c24c4cdf3870, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2897,6 +2897,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Digger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
+        type: 3}
+      propertyPath: m_BackSortingOrder
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
+        type: 3}
+      propertyPath: m_FrontSortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4842639348102469615, guid: 765553efd7d3ef04781020d8ffe58d67,
+        type: 3}
+      propertyPath: m_IsCustomRangeActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 765553efd7d3ef04781020d8ffe58d67, type: 3}
