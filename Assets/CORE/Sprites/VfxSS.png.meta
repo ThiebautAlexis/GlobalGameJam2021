@@ -29,6 +29,9 @@ TextureImporter:
   - first:
       213: -5426965761244119526
     second: Puf6
+  - first:
+      213: -5909851551488264989
+    second: Star
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -322,6 +325,27 @@ TextureImporter:
       bones: []
       spriteID: a1e36d8b46b8fa4b0800000000000000
       internalID: -5426965761244119526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 746
+        width: 115
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4304e535dfbfda0800000000000000
+      internalID: -5909851551488264989
       vertices: []
       indices: 
       edges: []
