@@ -24,7 +24,11 @@ namespace GlobalGameJam2021
         [SerializeField, Required] private new CameraDigger camera = null;
         [SerializeField, Required] private PlanetGenerator generator = null;
         [SerializeField, Required] private Digger digger = null;
-        [SerializeField, Required] private Animator title = null;
+
+        [Space]
+
+        [SerializeField, Required] private Animator titleAnimator = null;
+        [SerializeField, Required] private Animator scoreAnimator = null;
 
         [Space]
 
@@ -49,10 +53,12 @@ namespace GlobalGameJam2021
 
         #region Animation
         private readonly int switchTitle_Hash = Animator.StringToHash("Switch");
+        private readonly int scoreIncrease_Hash = Animator.StringToHash("Increase");
 
         // -----------------------
 
-        private void PlaySwitchTitle() => title.SetTrigger(switchTitle_Hash);
+        private void PlaySwitchTitle() => titleAnimator.SetTrigger(switchTitle_Hash);
+        private void PlayScoreIncrease() => scoreAnimator.SetTrigger(scoreIncrease_Hash);
         #endregion
 
         #region Methods
@@ -90,13 +96,13 @@ namespace GlobalGameJam2021
         public void EmptyOxygenTank(float _value)
         {
             oxygen -= _value;
+            oxygenGauge.fillAmount = oxygen / oxygenTank;
+
             if (oxygen < 0)
             {
                 isDrainingOxygen = false;
                 oxygen = 0;
 
-                // Update UI.
-                oxygenGauge.fillAmount = oxygen / oxygenTank;
                 digger.Kill();
 
                 // Restart game.
@@ -120,6 +126,8 @@ namespace GlobalGameJam2021
         {
             score += _increase;
             scoreText.text = score.ToString("### ### ### ###");
+
+            PlayScoreIncrease();
         }
 
         public void PickupKeyItem()

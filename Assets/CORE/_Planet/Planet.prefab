@@ -216,7 +216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 5684494150031584377}
   attributes: {fileID: 11400000, guid: dd87fedb19d8b6a4f963d24f7258fe10, type: 2}
-  oxygen: 300
+  oxygen: 30
   digger: {fileID: 0}
   speed: 100
 --- !u!60 &5684494150031584377
