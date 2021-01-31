@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -325,9 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layouts:
-  - {fileID: 11400000, guid: 00da67933744db84b968c7ee71485a74, type: 2}
-  debuggedLayout: {fileID: 11400000, guid: ae57c6ad0604a0d44a8355d46e8d3efe, type: 2}
-  debugRenderer: {fileID: 1039254683}
+  - {fileID: 0}
 --- !u!4 &1426575041
 Transform:
   m_ObjectHideFlags: 0
@@ -426,3 +424,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &105330084469639710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 253647114335078159, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508606411710100314, guid: b715915fcf95cc34ea9b07b8f9f4200e,
+        type: 3}
+      propertyPath: m_Name
+      value: PlanetP#3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b715915fcf95cc34ea9b07b8f9f4200e, type: 3}
