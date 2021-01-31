@@ -390,8 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   layouts:
-  - {fileID: 11400000, guid: ae57c6ad0604a0d44a8355d46e8d3efe, type: 2}
-  - {fileID: 11400000, guid: 5b82ce64fbd3b5e44a207b534aebe353, type: 2}
+  - {fileID: 11400000, guid: 37072897499eda643a4884a5049b3450, type: 2}
 --- !u!1 &302309551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,7 +1964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1427644920
 MonoBehaviour:
   m_ObjectHideFlags: 0
