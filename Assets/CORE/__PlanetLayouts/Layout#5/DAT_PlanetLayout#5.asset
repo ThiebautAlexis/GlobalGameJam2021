@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetLayout#5
+  m_EditorClassIdentifier: 
+  planet: {fileID: 7911175701213935791, guid: 51c2848399efc1b4c8d77da28ed25d18, type: 3}
+  surfacesArches:
+  - start: {x: 4.6179338, y: 1.3218625}
+    end: {x: 2.3518844, y: 3.8969183}
+    startTangent: {x: -0.2918415, y: 1.0300224}
+    endTangent: {x: 1.0986905, y: -0.42917514}
+  - start: {x: 3.7363634, y: -3.223121}
+    end: {x: 4.8594604, y: 0.2726858}
+    startTangent: {x: 0.4525962, y: 0.5206709}
+    endTangent: {x: 0.39343548, y: -1.585012}
+  - start: {x: -1.20043, y: -4.6336336}
+    end: {x: 3.4097672, y: -3.5474515}
+    startTangent: {x: 1.3537564, y: -0.18458462}
+    endTangent: {x: -1.1737995, y: -1.0560689}
+  - start: {x: -4.4328547, y: -2.7725415}
+    end: {x: -1.6053872, y: -4.585746}
+    startTangent: {x: 0.5897286, y: -1.0661545}
+    endTangent: {x: -0.8995328, y: -0.05695629}
+  - start: {x: -4.68753, y: 1.0084145}
+    end: {x: -4.5635433, y: -2.3720253}
+    startTangent: {x: -0.29184103, y: -0.8506596}
+    endTangent: {x: -0.3705902, y: 1.0401086}
+  - start: {x: -1.5726504, y: 4.2604284}
+    end: {x: -4.5635433, y: 1.3501596}
+    startTangent: {x: -1.1734116, y: -0.43926}
+    endTangent: {x: 0.4130273, y: 1.5886426}
+  - start: {x: 2.0711722, y: 4.044934}
+    end: {x: -1.2723489, y: 4.288727}
+    startTangent: {x: -0.5856979, y: 0.344357}
+    endTangent: {x: 1.8039488, y: 0.3936262}
+  layoutZones:
+  - {fileID: 11400000, guid: 147f9c71eaf374848add83b898ff3151, type: 2}
+  - {fileID: 11400000, guid: 57a0d4539f9b37b4c8d3b4f0b244eb25, type: 2}
+  - {fileID: 11400000, guid: e6ab1be3b49843f4897d1e54a9c018ea, type: 2}
+  - {fileID: 11400000, guid: a47ec0d2f97a31146aea5207399f2af4, type: 2}
+  props:
+  - {fileID: 11400000, guid: 1153378b69f5a0042b2277590cb07de0, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}
