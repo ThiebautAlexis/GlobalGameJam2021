@@ -117,10 +117,16 @@ namespace GlobalGameJam2021
         {
             if (state == DiggerState.Spawn)
             {
+                isLightLerping = true;
+                lightLerpValue = attributes.LightOriginalSize;
+
                 _planet.Activate();
             }
             else if (state == DiggerState.Traveling)
             {
+                isLightLerping = true;
+                lightLerpValue = attributes.LightOriginalSize;
+
                 isLevelCompleted = false;
                 _planet.Activate();
 
@@ -203,6 +209,11 @@ namespace GlobalGameJam2021
         #endregion
 
         #region Key Items
+        private float lightLerpValue = 0;
+        private bool isLightLerping = false;
+
+        // -----------------------
+
         public void PickupKeyItem(KeyItemType _type)
         {
             switch (_type)
@@ -215,8 +226,8 @@ namespace GlobalGameJam2021
                     break;
 
                 case KeyItemType.Lantern:
-                    // Lerp.
-                    lightMask.transform.localScale = new Vector3(attributes.LightExtendedSize, attributes.LightExtendedSize, 1);
+                    isLightLerping = true;
+                    lightLerpValue = attributes.LightExtendedSize;
                     break;
 
                 default:
@@ -387,9 +398,6 @@ namespace GlobalGameJam2021
             contactFiler.layerMask = attributes.LayerMask;
             contactFiler.useLayerMask = true;
             contactFiler.useTriggers = true;
-
-            // Initialize objects.
-            lightMask.transform.localScale = new Vector3(attributes.LightOriginalSize, attributes.LightOriginalSize, 1);
         }
 
         private void Update()
@@ -404,6 +412,14 @@ namespace GlobalGameJam2021
                     isLerping = false;
 
                 movement = transform.rotation * Vector3.up;
+            }
+
+            if (isLightLerping)
+            {
+                float _value = Mathf.MoveTowards(lightMask.transform.localScale.x, lightLerpValue, Time.deltaTime * attributes.LightLerpSpeed);
+                lightMask.transform.localScale = new Vector3(_value, _value, 1);
+                if (_value == lightLerpValue)
+                    isLightLerping = false;
             }
 
             switch (state)

@@ -47,6 +47,7 @@ namespace GlobalGameJam2021
 
         public float LightOriginalSize = 5;
         public float LightExtendedSize = 10;
+        public float LightLerpSpeed = 10;
 
         [HorizontalLine(2, SuperColor.Raspberry)]
 

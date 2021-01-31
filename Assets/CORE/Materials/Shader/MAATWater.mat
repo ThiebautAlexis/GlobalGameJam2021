@@ -10,7 +10,7 @@ Material:
   m_Name: MAATWater
   m_Shader: {fileID: -6465566751694194690, guid: 2caa87b42eb47ca4c8a41c80277b55ed,
     type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,7 +40,7 @@ Material:
     - _Refraction_Scale: 28.6
     - _Refraction_Speed: 1.02
     - _Refraction_Strength: 0.0161
-    - _Ripple_Density: 12.9
+    - _Ripple_Density: 65.3
     - _Ripple_Slimness: 20.81
     - _Strength: 0.26
     - _Water_Tiling_Speed: 5.17

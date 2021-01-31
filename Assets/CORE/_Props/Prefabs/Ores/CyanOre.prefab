@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7781146301835471913}
   - component: {fileID: 6980748686060233547}
   - component: {fileID: 608987815807008903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CyanOre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7933568603052671352}
   - component: {fileID: 9205483861863318930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &7338082246392857837
 GameObject:
@@ -159,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9159358067471648281}
   - component: {fileID: 8240937788855458846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &8724256585153038698
 GameObject:
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759643096104937244}
   - component: {fileID: 366287707787598526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OreM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,5 +310,5 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
