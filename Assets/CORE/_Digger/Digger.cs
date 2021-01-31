@@ -29,7 +29,10 @@ namespace GlobalGameJam2021
         [SerializeField, Required] private Animator animator = null;
 
         [SerializeField, Required] private AudioSource audioSource = null;
+        [SerializeField, Required] private ParticleSystem dirtFX = null;
         [SerializeField, Required] private SpriteMask lightMask = null;
+
+        public Collider2D Collider => collider;
 
         [HorizontalLine(1)]
 
@@ -113,6 +116,9 @@ namespace GlobalGameJam2021
             PlayDigging();
             CameraDigger.Instance.Shake(attributes.DiggingInShake);
 
+            dirtFX.Play();
+            Instantiate(attributes.DigFX, transform.position, Quaternion.identity);
+
             audioSource.volume = attributes.AudioDigLoopVolume;
             audioSource.clip = attributes.DigLoopClips[Random.Range(0, attributes.DigLoopClips.Length)];
             audioSource.Play();
@@ -130,6 +136,9 @@ namespace GlobalGameJam2021
 
             PlayFloating();
             CameraDigger.Instance.Shake(attributes.DiggingOutShake, true);
+
+            dirtFX.Stop();
+            Instantiate(attributes.DigFX, transform.position, Quaternion.identity);
 
             audioSource.Stop();
             audioSource.PlayOneShot(attributes.DigOutClips[Random.Range(0, attributes.DigOutClips.Length)], attributes.AudioDigVolume);
@@ -165,6 +174,18 @@ namespace GlobalGameJam2021
                 default:
                     break;
             }
+        }
+        #endregion
+
+        #region Others
+        public void Bounce(Collider2D _collider)
+        {
+            ColliderDistance2D _distance = collider.Distance(_collider);
+            float _angle = Random.Range(attributes.BounceRange.x, attributes.BounceRange.y);
+            movement = Quaternion.AngleAxis(_angle, Vector3.forward) * _distance.normal;
+
+            _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
         }
         #endregion
 
@@ -256,6 +277,8 @@ namespace GlobalGameJam2021
                     _trigger.OnExit(this);
                     _i--;
                 }
+                else
+                    _trigger.OnUpdate(this);
             }
 
             return _amount;

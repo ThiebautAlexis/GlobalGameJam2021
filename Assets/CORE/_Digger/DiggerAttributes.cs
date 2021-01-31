@@ -27,6 +27,7 @@ namespace GlobalGameJam2021
         [HorizontalLine(1)]
 
         public LayerMask LayerMask = new LayerMask();
+        [MinMax(-45, 45)] public Vector2 BounceRange = new Vector2(-10, 10);
 
         [HorizontalLine(1)]
 
@@ -39,6 +40,10 @@ namespace GlobalGameJam2021
         public float LightExtendedSize = 10;
 
         [HorizontalLine(2, SuperColor.Raspberry)]
+
+        public GameObject DigFX = null;
+
+        [Space]
 
         public AudioClip[] DigInClips = new AudioClip[] { };
         public AudioClip[] DigLoopClips = new AudioClip[] { };
