@@ -1,13 +1,19 @@
-﻿using UnityEngine;
+﻿// ===== Global Game Jam 2021 - https://github.com/ThiebautAlexis/GlobalGameJam2021 ===== //
+//
+// Notes:
+//
+// ====================================================================================== //
+
+using EnhancedEditor;
+using UnityEngine;
 
 namespace GlobalGameJam2021
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class TerrainBehaviour : Trigger
     {
-        public Texture2D TerrainTexture;
-        Texture2D cloneTexture;
-        SpriteRenderer spriteRenderer;
+        [SerializeField, Required] private new Renderer renderer;
+        private Texture2D cloneTexture;
+        
 
         float widthWorld, heightWorld;
         int widthPixel, heightPixel;
@@ -17,7 +23,7 @@ namespace GlobalGameJam2021
             get
             {
                 if (widthWorld == 0)
-                    widthWorld = spriteRenderer.bounds.size.x;
+                    widthWorld = renderer.bounds.size.x;
                 return widthWorld;
             }
 
@@ -27,7 +33,7 @@ namespace GlobalGameJam2021
             get
             {
                 if (heightWorld == 0)
-                    heightWorld = spriteRenderer.bounds.size.y;
+                    heightWorld = renderer.bounds.size.y;
                 return heightWorld;
             }
 
@@ -37,7 +43,7 @@ namespace GlobalGameJam2021
             get
             {
                 if (widthPixel == 0)
-                    widthPixel = spriteRenderer.sprite.texture.width;
+                    widthPixel = renderer.material.mainTexture.width;
 
                 return widthPixel;
             }
@@ -47,26 +53,16 @@ namespace GlobalGameJam2021
             get
             {
                 if (heightPixel == 0)
-                    heightPixel = spriteRenderer.sprite.texture.height;
+                    heightPixel = renderer.material.mainTexture.height;
 
                 return heightPixel;
             }
         }
 
-        void Init()
-        {
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            cloneTexture = Instantiate(TerrainTexture);
-            cloneTexture.alphaIsTransparency = true;
-            UpdateTexture();
-            gameObject.AddComponent<PolygonCollider2D>();
-        }
-
-
-        void MakeAHole(CircleCollider2D col)
+        void MakeAHole(Collider2D col)
         {
             Vector2 _c = WorldToPixel(col.bounds.center);
-            int _r = Mathf.RoundToInt(col.bounds.size.x * WidthPixel / WidthWorld);
+            int _r = Mathf.RoundToInt(col.bounds.extents.x * WidthPixel / WidthWorld);
 
             int _px, _nx, _py, _ny, _d;
             for (int i = 0; i <= _r; i++)
@@ -85,24 +81,13 @@ namespace GlobalGameJam2021
                     cloneTexture.SetPixel(_nx, _ny, Color.clear);
                 }
             }
-            cloneTexture.Apply();
-            UpdateTexture();
 
-            Destroy(gameObject.GetComponent<PolygonCollider2D>());
-            gameObject.AddComponent<PolygonCollider2D>();
-        }
-
-        void UpdateTexture()
-        {
-            spriteRenderer.sprite = Sprite.Create(cloneTexture,
-                                new Rect(0, 0, cloneTexture.width, cloneTexture.height),
-                                new Vector2(0.5f, 0.5f),
-                                50f
-                                );
+            cloneTexture.Apply(false);
         }
 
         Vector2 WorldToPixel(Vector2 pos)
         {
+            pos = Quaternion.Inverse(transform.rotation) * pos;
             Vector2 v = Vector2.zero;
 
             float _dx = (pos.x - transform.position.x);
@@ -114,15 +99,15 @@ namespace GlobalGameJam2021
             return v;
         }
 
-        public override bool OnEnter(Digger _digger)
-        {
-            MakeAHole(_digger.GetComponent<CircleCollider2D>());
-            return false;
-        }
+        public override bool OnEnter(Digger _digger) => false;
+
+        public override void OnUpdate(Digger _digger) => MakeAHole(_digger.Collider);
 
         void Start()
         {
-            Init();
+            cloneTexture = Instantiate(renderer.material.mainTexture) as Texture2D;
+            cloneTexture.alphaIsTransparency = true;
+            renderer.material.mainTexture = cloneTexture;
         }
     }
 }
