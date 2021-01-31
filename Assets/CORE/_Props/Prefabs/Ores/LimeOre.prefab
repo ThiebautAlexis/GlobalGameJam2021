@@ -48,6 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: -1294604993277514379}
+  fx: 6
+  sound: 1
   value: 1000
 --- !u!58 &-1294604993277514379
 CircleCollider2D:

@@ -37,6 +37,17 @@ namespace GlobalGameJam2021
 
         public float LightOriginalSize = 5;
         public float LightExtendedSize = 10;
+
+        [HorizontalLine(2, SuperColor.Raspberry)]
+
+        public AudioClip[] DigInClips = new AudioClip[] { };
+        public AudioClip[] DigLoopClips = new AudioClip[] { };
+        public AudioClip[] DigOutClips = new AudioClip[] { };
+
+        [Space]
+
+        [Range(0, 1)] public float AudioDigVolume = 1;
+        [Range(0, 1)] public float AudioDigLoopVolume = .7f;
         #endregion
     }
 }

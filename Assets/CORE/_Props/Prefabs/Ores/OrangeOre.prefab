@@ -294,6 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: -463282594629527215}
+  fx: 7
+  sound: 1
   value: 1000
 --- !u!58 &-463282594629527215
 CircleCollider2D:

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c6a89d3068686449e5048b3b11e2b6, type: 3}
   m_Name: DAT_CameraDiggerAttributes
   m_EditorClassIdentifier: 
-  ShakeForce: 20
-  TraumaSoftening: 0.6
+  ShakeForce: 25
+  TraumaSoftening: 0.5
   ShakeMaxOffset: {x: 1.5, y: 1.5}
-  ShakeMaxAngle: 7
+  ShakeMaxAngle: 10
   Vibration: 0.2
   VibrationForce: 20
   VibrationMaxOffset: {x: 0.2, y: 0.2}

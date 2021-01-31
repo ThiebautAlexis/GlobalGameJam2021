@@ -26,8 +26,10 @@ namespace GlobalGameJam2021
 		[SerializeField, Required] private DiggerAttributes attributes = null;
 		[SerializeField, Required] private new Rigidbody2D rigidbody = null;
 		[SerializeField, Required] private new Collider2D collider = null;
+        [SerializeField, Required] private Animator animator = null;
 
-		[SerializeField, Required] private SpriteMask lightMask = null;
+        [SerializeField, Required] private AudioSource audioSource = null;
+        [SerializeField, Required] private SpriteMask lightMask = null;
 
         [HorizontalLine(1)]
 
@@ -45,6 +47,15 @@ namespace GlobalGameJam2021
         // -----------------------
 
         private ContactFilter2D contactFiler = new ContactFilter2D();
+        #endregion
+
+        #region Animation
+        public readonly int state_Hash = Animator.StringToHash("State");
+
+        // -----------------------
+
+        private void PlayFloating() => animator.SetInteger(state_Hash, 0);
+        public void PlayDigging() => animator.SetInteger(state_Hash, hasPickaxe ? 2 : 1);
         #endregion
 
         #region Methods
@@ -98,7 +109,13 @@ namespace GlobalGameJam2021
             isLerping = false;
             state = DiggerState.Digging;
 
+            PlayDigging();
             CameraDigger.Instance.Shake(attributes.DiggingInShake);
+
+            audioSource.volume = attributes.AudioDigLoopVolume;
+            audioSource.clip = attributes.DigLoopClips[Random.Range(0, attributes.DigLoopClips.Length)];
+            audioSource.Play();
+            audioSource.PlayOneShot(attributes.DigInClips[Random.Range(0, attributes.DigInClips.Length)], attributes.AudioDigVolume);
         }
 
         /// <summary>
@@ -110,7 +127,11 @@ namespace GlobalGameJam2021
             rotationSpeedVar = 0;
             state = DiggerState.AboutTurn;
 
+            PlayFloating();
             CameraDigger.Instance.Shake(attributes.DiggingOutShake, true);
+
+            audioSource.Stop();
+            audioSource.PlayOneShot(attributes.DigOutClips[Random.Range(0, attributes.DigOutClips.Length)], attributes.AudioDigVolume);
 
             // Start lerping rotation.
             isLerping = true;

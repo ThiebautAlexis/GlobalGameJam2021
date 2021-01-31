@@ -12,6 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ef6f90c97e522e4d9b866dcd178a0c6, type: 3}
   m_Name: DAT_GameManagerAttributes
   m_EditorClassIdentifier: 
+  LootBoneClips:
+  - {fileID: 8300000, guid: 58193a6a1c7e88447b89fae832e061a9, type: 3}
+  - {fileID: 8300000, guid: 41c6e6b89df29d14bb9908cdb1e444a4, type: 3}
+  - {fileID: 8300000, guid: 3086e09bfb4dc6b42be357e3f6fd9e54, type: 3}
+  LootOreClips:
+  - {fileID: 8300000, guid: a6d8e87998117b245ae76f0594827305, type: 3}
+  - {fileID: 8300000, guid: 18ad65f0e40e2824e92344315cbda249, type: 3}
+  - {fileID: 8300000, guid: 0b564905bac1e954fab47018a90a4a17, type: 3}
+  LootAmberClip: {fileID: 8300000, guid: 9245ca4e3d7c65e43bb582024f18910f, type: 3}
+  LootGenericFX: {fileID: 5045160288217552832, guid: 03b74879184f02342a7ce6aa3b40148f,
+    type: 3}
+  LootAmberFX: {fileID: 3888113838223733654, guid: 4c0160a261db6c44f8f49dc5d89954bf,
+    type: 3}
+  LootCyanOreFX: {fileID: 2348033671019227873, guid: 3600c31781daa2b48a5ca40572fa6e64,
+    type: 3}
+  LootDarkBlueOreFX: {fileID: 6536192387659415427, guid: b4df00d20c00d564982c5884b291c3bb,
+    type: 3}
+  LootDarkGreenOreFX: {fileID: 7588147617476246340, guid: b64e2e3e6c1dd37478d27e3e4c9428dd,
+    type: 3}
+  LootLightBlueOreFX: {fileID: 8568330696975518330, guid: 7aa66040c516c5140baf5a75d5891b5b,
+    type: 3}
+  LootLightGreenOreFX: {fileID: 4975196091301532613, guid: b1e1bf2ff6a8799458d980717a86bf1e,
+    type: 3}
+  LootOrangeOreFX: {fileID: 1673271277131689407, guid: 6e8565ad83c483c48b46dc8371fbdc5b,
+    type: 3}
+  LootPinkOreFX: {fileID: 1590498580949968871, guid: 13c81afa94ff4204ea1381e7b523584c,
+    type: 3}
+  LootRedOreFX: {fileID: 6877708649711072490, guid: c55829e201365e9488f81d16112f70fc,
+    type: 3}
+  AudioEffectsVolume: 0.91
   ActionAltInput:
     m_Name: 
     m_Type: 0
@@ -44,14 +74,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Action Input
       m_Flags: 0
-    - m_Name: 
-      m_Id: 347711b5-8a75-4077-83bc-728b42251c01
-      m_Path: 
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Action Input
-      m_Flags: 0
   QuitInput:
     m_Name: Quit Input
     m_Type: 0
@@ -63,6 +85,22 @@ MonoBehaviour:
     - m_Name: 
       m_Id: d91bfe7b-1381-4d9a-990c-4ddea1d6ebdf
       m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Quit Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 3e546748-3e36-4b2f-9751-1634821ea4c6
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Quit Input
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 0622871c-16fe-4a32-97a5-40feb2dd2d3d
+      m_Path: <Gamepad>/select
       m_Interactions: 
       m_Processors: 
       m_Groups: 

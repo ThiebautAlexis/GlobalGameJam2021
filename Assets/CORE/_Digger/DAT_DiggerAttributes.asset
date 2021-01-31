@@ -82,8 +82,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 10
+      time: 0.004144811
+      value: 4.1168175
       inSlope: -1.8534794
       outSlope: -1.8534794
       tangentMode: 0
@@ -91,8 +91,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.23063548
     - serializedVersion: 3
-      time: 0.25
-      value: 0
+      time: 0.40637207
+      value: -0.13412476
       inSlope: 0.464065
       outSlope: 0.464065
       tangentMode: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
       inWeight: 0.16353369
       outWeight: 0.17012751
     - serializedVersion: 3
-      time: 0.5
-      value: 10
+      time: 0.7850647
+      value: 9.73172
       inSlope: 0.44585454
       outSlope: 0.44585454
       tangentMode: 0
@@ -148,17 +148,17 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.03
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.29903534
+      value: 0.01940918
+      inSlope: 0.25258896
+      outSlope: 0.25258896
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.15
-      value: 3.5
+      time: 0.30736387
+      value: 4.8908157
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -171,7 +171,23 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  DiggingInShake: 0.5
-  DiggingOutShake: 0.2
+  DiggingInShake: 0.4
+  DiggingOutShake: 0.15
   LightOriginalSize: 5
   LightExtendedSize: 10
+  DigInClips:
+  - {fileID: 8300000, guid: 35f53bd1a3d75094abd0d1c9465b74b7, type: 3}
+  - {fileID: 8300000, guid: e32a945f8b5f3cf478333a7810d02a2a, type: 3}
+  - {fileID: 8300000, guid: e2c8dee8bbfd0114089222971aa692c6, type: 3}
+  DigLoopClips:
+  - {fileID: 8300000, guid: b51625984992ad3448d93b14d6952677, type: 3}
+  - {fileID: 8300000, guid: d1598a3caa7c0b54a952ac220a00cd96, type: 3}
+  - {fileID: 8300000, guid: d53de016f4484ab4586de1fe94b1db94, type: 3}
+  - {fileID: 8300000, guid: 579d55c5cdc859744beea3b31c708cbf, type: 3}
+  - {fileID: 8300000, guid: 0657fd46c3a210743b34c8619971b574, type: 3}
+  DigOutClips:
+  - {fileID: 8300000, guid: 0f7e041c699fc0b4db6696960f87888e, type: 3}
+  - {fileID: 8300000, guid: 88ee857ace88ab249bd49b744c44d9cb, type: 3}
+  - {fileID: 8300000, guid: ede9836566ca08f4c8cd555b027de77f, type: 3}
+  AudioDigVolume: 0.18
+  AudioDigLoopVolume: 0.039

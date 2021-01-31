@@ -4,9 +4,6 @@
 //
 // ====================================================================================== //
 
-using EnhancedEditor;
-using UnityEngine;
-
 namespace GlobalGameJam2021
 {
     public enum KeyItemType
@@ -16,11 +13,9 @@ namespace GlobalGameJam2021
         Lantern
     }
 
-	public abstract class KeyItem : Trigger
+	public abstract class KeyItem : LootItem
     {
         #region Content
-        [SerializeField, Required] private GameObject fx = null;
-
         public virtual KeyItemType ItemType => KeyItemType.Unknown;
 
         public override bool OnEnter(Digger _digger)
@@ -28,9 +23,7 @@ namespace GlobalGameJam2021
             GameManager.Instance.PickupKeyItem();
             _digger.PickupKeyItem(ItemType);
 
-            Instantiate(fx, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            return false;
+            return base.OnEnter(_digger);
         }
 
         private void Awake() => GameManager.Instance.IncreaseKeyItemCount();

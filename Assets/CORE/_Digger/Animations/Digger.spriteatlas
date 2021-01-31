@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Digger
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: e7150f37ba3b2854db5dc8c6960e9481, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 51cc8640fa38e09498f806d1f8f1daff, type: 3}
+  - {fileID: 21300000, guid: cf2217b07379dff4f8bd40b32d5c8139, type: 3}
+  - {fileID: 21300000, guid: 7d475a917bf38f343a7492d1e5292b5e, type: 3}
+  - {fileID: 21300000, guid: d5230fb19a31416479bfbea067059b6b, type: 3}
+  - {fileID: 21300000, guid: 0e0ad912dc25837488d3a1cfe7338873, type: 3}
+  - {fileID: 21300000, guid: 857ea41315121df4088ac67e55cbec91, type: 3}
+  - {fileID: 21300000, guid: 90722bb3d2f276c49b98aa201c7a0bea, type: 3}
+  - {fileID: 21300000, guid: 9c78a674cf9f4f447b023413d7226930, type: 3}
+  - {fileID: 21300000, guid: e7a62f94385d1bc409ac4a80c8ed379a, type: 3}
+  - {fileID: 21300000, guid: 4a5f58b4558028b4ca9a505a08a6db44, type: 3}
+  - {fileID: 21300000, guid: 82631ab43bcee524dbc08353e7b32257, type: 3}
+  - {fileID: 21300000, guid: 299eb8c471da43c4f8c5cfcecb1d8348, type: 3}
+  - {fileID: 21300000, guid: b510cf357bc0c2e43b4cb7b2021dea92, type: 3}
+  - {fileID: 21300000, guid: 405a0985698460f4794aaf4e53fb3046, type: 3}
+  - {fileID: 21300000, guid: 3ea851f5b5f463447a633ea55c48072f, type: 3}
+  - {fileID: 21300000, guid: 40c8e7580a9724a42b85664f606801a8, type: 3}
+  - {fileID: 21300000, guid: 85322768a69a9ae47bede99564e8c60b, type: 3}
+  - {fileID: 21300000, guid: 39f438a88c11714408b6a1d03862089a, type: 3}
+  - {fileID: 21300000, guid: d3c5c079d7d166148af98f653e20ad90, type: 3}
+  - {fileID: 21300000, guid: 32e1292b088020341a9e96aaa4a5ba85, type: 3}
+  - {fileID: 21300000, guid: c63e7b1c540ffc64e81b0c0cc99d8f15, type: 3}
+  - {fileID: 21300000, guid: 33b73f5c63fdc254db9ff91767f45fad, type: 3}
+  - {fileID: 21300000, guid: 3355a76ced8a094449dc39329e9143d8, type: 3}
+  - {fileID: 21300000, guid: 22429f9cac3adda47884d5e836ef8063, type: 3}
+  - {fileID: 21300000, guid: d250d1ace8fc4e04d9fd4acb2fc164de, type: 3}
+  - {fileID: 21300000, guid: 85bb86bc04ff8724096e7bfe19fdeb1d, type: 3}
+  - {fileID: 21300000, guid: 470f1e3d6e32879478029e8e19861c51, type: 3}
+  - {fileID: 21300000, guid: d185ff4e07e17434e9b6a09265ccb22b, type: 3}
+  - {fileID: 21300000, guid: 5f2b5caf4d5566e4ea2b8793c8b56416, type: 3}
+  - {fileID: 21300000, guid: 052a59df35cea1c4abb2b59124a8f791, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - digger_pickaxe_digging_06
+  - digger_floating_09
+  - digger_hand_digging_03
+  - digger_pickaxe_digging_04
+  - digger_floating_13
+  - digger_hand_digging_04
+  - digger_floating_12
+  - digger_floating_05
+  - digger_pickaxe_digging_03
+  - digger_floating_02
+  - digger_pickaxe_digging_02
+  - digger_pickaxe_digging_01
+  - digger_pickaxe_digging_08
+  - digger_floating_06
+  - digger_floating_11
+  - digger_floating_03
+  - digger_hand_digging_02
+  - digger_floating_08
+  - digger_pickaxe_digging_07
+  - digger_idle
+  - digger_floating_15
+  - digger_floating_16
+  - digger_hand_digging_05
+  - digger_floating_04
+  - digger_floating_07
+  - digger_floating_14
+  - digger_hand_digging_01
+  - digger_pickaxe_digging_05
+  - digger_floating_10
+  - digger_floating_01
+  m_Tag: Digger
+  m_IsVariant: 0
