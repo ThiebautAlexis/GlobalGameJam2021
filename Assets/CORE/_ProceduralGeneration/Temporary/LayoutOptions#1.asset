@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26e89da45f17f704ebdadb1a546cf8a9, type: 3}
-  m_Name: DAT_LayoutZone2#1
+  m_Script: {fileID: 11500000, guid: 2249a00bd1f33604bb563ecce5fdee54, type: 3}
+  m_Name: LayoutOptions#1
   m_EditorClassIdentifier: 
-  offsetPosition: {x: -2.88, y: -0.84}
-  radius: 1.68
-  spacing: 0.9
-  count: {x: 2, y: 5}
+  propsCount: {x: 15, y: 15}
+  globalSpacing: 1
+  chunkProbability: 0.2
+  lavaProbability: 0.1
+  maxLavaCount: 1
+  surfacePropsCount: {x: 8, y: 11}

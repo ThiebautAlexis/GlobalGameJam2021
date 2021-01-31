@@ -44,6 +44,7 @@ namespace GlobalGameJam2021
         [Space]
 
         [SerializeField, ReadOnly] private bool hasPickaxe = false;
+        public bool HasPickaxe => hasPickaxe;
 
         [SerializeField] private Vector2 movement = new Vector2();
 

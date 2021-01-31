@@ -19,11 +19,10 @@ namespace GlobalGameJam2021
         public PlanetController Planet => planet;
 
         [SerializeField] private BezierArc[] surfacesArches = new BezierArc[] { };
-
-        [HorizontalLine(1, order = 0), Section("Settings and Props", order = 1), Space(order = 2)]
         [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { };
         [SerializeField] private LayoutProps[] props = new LayoutProps[] { };
-        [SerializeField] private Sprite[] surfaceProps = new Sprite[] { }; 
+
+        [HorizontalLine(1, order = 0), Section("Options", order = 1), Space(order = 2)]
         [SerializeField] private PlanetLayoutOptions[] options = new PlanetLayoutOptions[] { };
         #endregion
 
@@ -37,23 +36,7 @@ namespace GlobalGameJam2021
             PlanetLayoutOptions _options = options[_index];
 
             // Instantiate the Surface Props 
-            int _c = _options.SurfacePropsCount;
-            _c = Mathf.Min(_c, surfacesArches.Length); 
-            Vector2 _pos;
-            float _value; 
-            for (int i = 0; i < _c; i++)
-            {
-                _value = Random.value; 
-                _index = Random.Range(0, surfacesArches.Length);
-                _pos = surfacesArches[_index].GetRandomPosition(_value);
-                SpriteRenderer _renderer = new GameObject().AddComponent<SpriteRenderer>();
-                _renderer.transform.SetParent(_t); 
-                _renderer.sprite = surfaceProps[Random.Range(0, surfaceProps.Length)];
-                _renderer.transform.localPosition = _pos;
-                _renderer.transform.localScale = new Vector3(.25f, .25f, 1);
-                _renderer.transform.localRotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _pos + surfacesArches[_index].GetMediumTangent(_value)));
-            }
-
+            int _c;
             // Get the number of props instancied 
             int[] _zonesCount = new int[layoutZones.Length];
             int _globalCount = _options.Count;
@@ -74,7 +57,20 @@ namespace GlobalGameJam2021
 
             _index = Random.Range(0, props.Length);
             LayoutProps _props = props[_index];
-            GameObject _go = new GameObject(); 
+            int _anchorIndex;
+            // Instantiate the Surfaces Props
+            _c = _options.SurfacePropsCount;
+            _c = Mathf.Min(_c, surfacesArches.Length);
+            Vector2 _pos;
+            for (int i = 0; i < _c; i++)
+            {
+                _anchorIndex = Random.Range(0, surfacesArches.Length);
+                _pos = surfacesArches[_anchorIndex].GetRandomPosition(Random.value);
+                _index = Random.Range(0, _props.SurfacesProps.Length);
+                Debug.DrawLine(_pos, _pos + surfacesArches[_anchorIndex].GetMediumTangent());
+                Instantiate(_props.SurfacesProps[_index], _pos, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _pos + surfacesArches[_anchorIndex].GetMediumTangent())), _t);
+            }
+
             // First of all, we need to instanciate the main objects (tools, etc...)
             for (int i = 0; i < _props.Tools.Length; i++)
             {
@@ -82,6 +78,7 @@ namespace GlobalGameJam2021
                 Instantiate(_props.Tools[i], _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
                 _positions.RemoveAt(_index); 
             }
+
             // Then Instantiate the props and the bonus
             for (int i = 0; i < _positions.Count; i++)
             {
@@ -105,10 +102,9 @@ namespace GlobalGameJam2021
         public Vector2 GetRandomPosition(float _value) => BezierUtility.EvaluateCubicCurve(start, end, start + startTangent, end + endTangent, _value);
         public Vector2 GetCenterPosition(float _value) => Vector2.Lerp(start, end, _value);
 
-        public Vector2 GetMediumTangent(float _value)
+        public Vector2 GetMediumTangent()
         {
-            Vector2 _v = (start + startTangent) + (end + endTangent).normalized; 
-            return _v;
+            return (start + startTangent) + (end + endTangent).normalized; 
         }
     }
 }
