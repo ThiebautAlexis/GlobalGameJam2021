@@ -16,27 +16,47 @@ namespace GlobalGameJam2021
         #region Content
         [HorizontalLine(1, order = 0), Section("PlanetLayout", order = 1), Space(order = 2)]
         [SerializeField] private PlanetController planet;
-        [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { };
-        [SerializeField] private LayoutProps[] props = new LayoutProps[] { }; 
-        [SerializeField] private PlanetLayoutOptions[] options = new PlanetLayoutOptions[] { };
-        
+        public PlanetController Planet => planet;
 
+        [SerializeField] private BezierArc[] surfacesArches = new BezierArc[] { };
+
+        [HorizontalLine(1, order = 0), Section("Settings and Props", order = 1), Space(order = 2)]
+        [SerializeField] private LayoutZone[] layoutZones = new LayoutZone[] { };
+        [SerializeField] private LayoutProps[] props = new LayoutProps[] { };
+        [SerializeField] private Sprite[] surfaceProps = new Sprite[] { }; 
+        [SerializeField] private PlanetLayoutOptions[] options = new PlanetLayoutOptions[] { };
         #endregion
 
         #region Methods
         public Transform GenerateLayout(Vector2 _origin)
         {
-
-            Transform _t =Instantiate(planet, _origin, Quaternion.identity).transform;
-          
+            Transform _t =Instantiate(planet, _origin, Quaternion.identity).transform;        
 
             // Select the options for this generation
             int _index = Random.Range(0, options.Length);
             PlanetLayoutOptions _options = options[_index];
+
+            // Instantiate the Surface Props 
+            int _c = _options.SurfacePropsCount;
+            _c = Mathf.Min(_c, surfacesArches.Length); 
+            Vector2 _pos;
+            float _value; 
+            for (int i = 0; i < _c; i++)
+            {
+                _value = Random.value; 
+                _index = Random.Range(0, surfacesArches.Length);
+                _pos = surfacesArches[_index].GetRandomPosition(_value);
+                SpriteRenderer _renderer = new GameObject().AddComponent<SpriteRenderer>();
+                _renderer.transform.SetParent(_t); 
+                _renderer.sprite = surfaceProps[Random.Range(0, surfaceProps.Length)];
+                _renderer.transform.localPosition = _pos;
+                _renderer.transform.localScale = new Vector3(.25f, .25f, 1);
+                _renderer.transform.localRotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _pos + surfacesArches[_index].GetMediumTangent(_value)));
+            }
+
             // Get the number of props instancied 
             int[] _zonesCount = new int[layoutZones.Length];
             int _globalCount = _options.Count;
-            int _c; 
             for (int i = 0; i < _zonesCount.Length; i++)
             {
                 _c = layoutZones[i].Count;
@@ -70,20 +90,26 @@ namespace GlobalGameJam2021
             }
 
             return _t; 
-        }
-
-        public void Draw(Vector3 _origin)
-        {
-            for (int i = 0; i < layoutZones.Length; i++)
-            {
-                Gizmos.color = Color.green;
-                Gizmos.DrawWireSphere(_origin + (Vector3)layoutZones[i].OffsetPosition, layoutZones[i].Radius);
-                Gizmos.color = Color.red;
-                Gizmos.DrawWireSphere(_origin + (Vector3)layoutZones[i].OffsetPosition, layoutZones[i].Spacing);
-            }
-        }
+        }        
         #endregion
     }
 
+    [System.Serializable]
+    public class BezierArc
+    {
+        [SerializeField] private Vector2 start = new Vector2(-1, 0); 
+        [SerializeField] private Vector2 end = new Vector2(1, 0);
+        [SerializeField] private Vector2 startTangent = new Vector2(.5f, .5f); 
+        [SerializeField] private Vector2 endTangent = new Vector2(.5f, .5f);
+
+        public Vector2 GetRandomPosition(float _value) => BezierUtility.EvaluateCubicCurve(start, end, start + startTangent, end + endTangent, _value);
+        public Vector2 GetCenterPosition(float _value) => Vector2.Lerp(start, end, _value);
+
+        public Vector2 GetMediumTangent(float _value)
+        {
+            Vector2 _v = (start + startTangent) + (end + endTangent).normalized; 
+            return _v;
+        }
+    }
 }
 
