@@ -67,7 +67,6 @@ namespace GlobalGameJam2021
                 _anchorIndex = Random.Range(0, surfacesArches.Length);
                 _pos = surfacesArches[_anchorIndex].GetRandomPosition(Random.value);
                 _index = Random.Range(0, _props.SurfacesProps.Length);
-                Debug.DrawLine(_pos, _pos + surfacesArches[_anchorIndex].GetMediumTangent());
                 Instantiate(_props.SurfacesProps[_index], _pos, Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _pos + surfacesArches[_anchorIndex].GetMediumTangent())), _t);
             }
 
@@ -78,7 +77,19 @@ namespace GlobalGameJam2021
                 Instantiate(_props.Tools[i], _positions[_index], Quaternion.Euler(0, 0, Random.value * 360), _t);
                 _positions.RemoveAt(_index); 
             }
-
+            float _value; 
+            for (int i = 0; i < _options.MaxLavaCount; i++)
+            {
+                _value = Random.value;
+                if (_value <= _options.LavaProbability)
+                {
+                    _index = Random.Range(0, _props.LavaLakes.Length);
+                    _anchorIndex = Random.Range(0, _positions.Count);
+                    Instantiate(_props.LavaLakes[_index], _positions[_anchorIndex], Quaternion.Euler(0, 0, Random.value * 360), _t);
+                    _positions.RemoveAt(_anchorIndex); 
+                }
+            }
+            
             // Then Instantiate the props and the bonus
             for (int i = 0; i < _positions.Count; i++)
             {

@@ -15,6 +15,6 @@ MonoBehaviour:
   propsCount: {x: 8, y: 25}
   globalSpacing: 1.5
   chunkProbability: 0
-  lavaProbability: 0.1
-  maxLavaCount: 1
+  lavaProbability: 0.25
+  maxLavaCount: 5
   surfacePropsCount: {x: 6, y: 22}
