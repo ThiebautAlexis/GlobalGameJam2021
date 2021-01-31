@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layouts:
   - {fileID: 11400000, guid: 00da67933744db84b968c7ee71485a74, type: 2}
-  debuggedLayout: {fileID: 11400000, guid: 4669098d8e2f3fc4a89b117226fda5da, type: 2}
+  debuggedLayout: {fileID: 11400000, guid: ae57c6ad0604a0d44a8355d46e8d3efe, type: 2}
   debugRenderer: {fileID: 1039254683}
 --- !u!4 &1426575041
 Transform:
