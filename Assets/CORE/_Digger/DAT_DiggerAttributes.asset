@@ -115,7 +115,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.001459837
       value: 0
       inSlope: 0.047999058
       outSlope: 0.047999058
@@ -124,13 +124,13 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.091970794
     - serializedVersion: 3
-      time: 1
+      time: 2
       value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
+      inSlope: 1.200309
+      outSlope: 1.200309
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.04817527
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -171,10 +171,12 @@ MonoBehaviour:
   LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  BounceRange: {x: -10, y: 10}
   DiggingInShake: 0.4
   DiggingOutShake: 0.15
   LightOriginalSize: 5
   LightExtendedSize: 10
+  DigFX: {fileID: 3927844079346959721, guid: fbb34e09bd3f4904fba294a8a4a7ca24, type: 3}
   DigInClips:
   - {fileID: 8300000, guid: 35f53bd1a3d75094abd0d1c9465b74b7, type: 3}
   - {fileID: 8300000, guid: e32a945f8b5f3cf478333a7810d02a2a, type: 3}
