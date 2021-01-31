@@ -39,17 +39,19 @@ namespace GlobalGameJam2021
             // Instantiate the Surface Props 
             int _c = _options.SurfacePropsCount;
             _c = Mathf.Min(_c, surfacesArches.Length); 
-            Vector2 _pos; 
+            Vector2 _pos;
+            float _value; 
             for (int i = 0; i < _c; i++)
             {
+                _value = Random.value; 
                 _index = Random.Range(0, surfacesArches.Length);
-                _pos = surfacesArches[_index].RandomPosition;
+                _pos = surfacesArches[_index].GetRandomPosition(_value);
                 SpriteRenderer _renderer = new GameObject().AddComponent<SpriteRenderer>();
                 _renderer.transform.SetParent(_t); 
                 _renderer.sprite = surfaceProps[Random.Range(0, surfaceProps.Length)];
                 _renderer.transform.localPosition = _pos;
                 _renderer.transform.localScale = new Vector3(.25f, .25f, 1);
-                //_renderer.transform.localRotation = Quaternion.Euler(0, 0, Vector2.Angle(Vector2.up, _pos - surfacesArches[_index].CenterPosition));
+                _renderer.transform.localRotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, _pos + surfacesArches[_index].GetMediumTangent(_value)));
             }
 
             // Get the number of props instancied 
@@ -100,8 +102,14 @@ namespace GlobalGameJam2021
         [SerializeField] private Vector2 startTangent = new Vector2(.5f, .5f); 
         [SerializeField] private Vector2 endTangent = new Vector2(.5f, .5f);
 
-        public Vector2 RandomPosition => BezierUtility.EvaluateCubicCurve(start, end, start + startTangent, end + endTangent, Random.value);
-        public Vector2 CenterPosition => (start + end) / 2; 
+        public Vector2 GetRandomPosition(float _value) => BezierUtility.EvaluateCubicCurve(start, end, start + startTangent, end + endTangent, _value);
+        public Vector2 GetCenterPosition(float _value) => Vector2.Lerp(start, end, _value);
+
+        public Vector2 GetMediumTangent(float _value)
+        {
+            Vector2 _v = (start + startTangent) + (end + endTangent).normalized; 
+            return _v;
+        }
     }
 }
 
