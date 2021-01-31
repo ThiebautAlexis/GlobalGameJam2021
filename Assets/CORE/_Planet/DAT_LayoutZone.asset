@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e89da45f17f704ebdadb1a546cf8a9, type: 3}
   m_Name: DAT_LayoutZone
   m_EditorClassIdentifier: 
-  offsetPosition: {x: -0.67, y: 0.16}
-  radius: 4.31
-  spacing: 1.06
+  offsetPosition: {x: 0, y: 0}
+  radius: 4.12
+  spacing: 1.55
   count: {x: 7, y: 7}

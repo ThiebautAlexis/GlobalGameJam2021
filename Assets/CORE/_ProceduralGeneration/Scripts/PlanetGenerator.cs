@@ -15,16 +15,12 @@ namespace GlobalGameJam2021
 		#region Fields / Properties
 		[HorizontalLine(1, order = 0), Section("PlanetGenerator", order = 1)]
 		[SerializeField] private PlanetLayout[] layouts = new PlanetLayout[] { };
-		[HorizontalLine(1, order = 0), Section("DEBUG", order = 1)]
-
-		[SerializeField] private PlanetLayout debuggedLayout = null; 
-		[SerializeField] private SpriteRenderer debugRenderer; 
 		#endregion
 
 		#region Methods
 		private void Start()
 		{
-			Transform _t = debuggedLayout.GenerateLayout(transform.position);
+			GenerateRandomLayout();
 		}
 
 		private void GenerateRandomLayout()
@@ -32,12 +28,6 @@ namespace GlobalGameJam2021
 			int _layoutIndex = Random.Range(0, layouts.Length);
 
 			Transform _t = layouts[_layoutIndex].GenerateLayout(transform.position); 
-		}
-
-		private void OnDrawGizmos()
-		{
-			if (debuggedLayout == null) return;
-			debuggedLayout.Draw(transform.position);
 		}
 		#endregion
 	}

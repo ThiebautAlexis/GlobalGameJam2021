@@ -13,9 +13,38 @@ MonoBehaviour:
   m_Name: DAT_PlanetLayout
   m_EditorClassIdentifier: 
   planet: {fileID: 5684494150031584376, guid: 465ce3dc81ad52a4facf2fc0f53fe6a1, type: 3}
+  surfacesArches:
+  - start: {x: 0.784522, y: 4.3803554}
+    end: {x: 4.5602694, y: 1.1731567}
+    startTangent: {x: 0.8811992, y: -0.13328886}
+    endTangent: {x: -0.85141325, y: 2.1605277}
+  - start: {x: -2.7573938, y: 3.6083996}
+    end: {x: 0.11017084, y: 4.419913}
+    startTangent: {x: 0.8584943, y: 0.57055354}
+    endTangent: {x: -1.2828002, y: 0.09440851}
+  - start: {x: -4.914329, y: -0.29678977}
+    end: {x: -3.204699, y: 3.0349329}
+    startTangent: {x: 0.1773572, y: 1.2062817}
+    endTangent: {x: -1.0557542, y: -0.58672786}
+  - start: {x: -1.572079, y: -4.4169364}
+    end: {x: -4.6982822, y: -1.5316893}
+    startTangent: {x: -1.7291071, y: 0.63899684}
+    endTangent: {x: 0.1835494, y: -1.3176218}
+  - start: {x: 4.6897106, y: -1.4547234}
+    end: {x: 0.33721662, y: -4.344059}
+    startTangent: {x: -0.5945978, y: -1.3593366}
+    endTangent: {x: 2.2137055, y: 0.13981915}
   layoutZones:
   - {fileID: 11400000, guid: b688ed2c581ae9f43a27110568cc440e, type: 2}
   props:
   - {fileID: 11400000, guid: a07ab945a364f40438477934032b2ad9, type: 2}
+  surfaceProps:
+  - {fileID: -5525316411550033709, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: -106356631378558546, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: -3670956624404410848, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: 8266987988355086014, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: -7155130942464873972, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: 8635446644642478407, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
+  - {fileID: 4736015148949321148, guid: f441ab72e0869cd43ba02c72b2fdaca1, type: 3}
   options:
   - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}
