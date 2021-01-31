@@ -106,7 +106,7 @@ namespace GlobalGameJam2021
         void Start()
         {
             cloneTexture = Instantiate(renderer.material.mainTexture) as Texture2D;
-            cloneTexture.alphaIsTransparency = true;
+            //cloneTexture.alphaIsTransparency = true;
             renderer.material.mainTexture = cloneTexture;
         }
     }

@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 2119229536721551341, guid: c4fc57276396ef84a969f9117c71f48f,
         type: 3}
       propertyPath: doBounce
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2119229536721551346, guid: c4fc57276396ef84a969f9117c71f48f,
         type: 3}

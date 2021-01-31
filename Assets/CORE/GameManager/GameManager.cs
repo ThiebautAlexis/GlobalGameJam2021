@@ -34,6 +34,7 @@ namespace GlobalGameJam2021
 
         [SerializeField, Required] private TextMeshProUGUI scoreText = null;
         [SerializeField, Required] private Image oxygenGauge = null;
+        [SerializeField, Required] private Image deathScreen = null;
 
         [Space]
 
@@ -112,7 +113,17 @@ namespace GlobalGameJam2021
 
         private IEnumerator DoResetGame()
         {
-            yield return new WaitForSeconds(attributes.ResetGameTime);
+            float _var = 0;
+            while (true)
+            {
+                _var += Time.deltaTime;
+                deathScreen.color = new Color(0, 0, 0, _var / attributes.ResetGameTime);
+                if (_var > attributes.ResetGameTime)
+                    break;
+
+                yield return null;
+            }
+
             ResetGame();
         }
         #endregion

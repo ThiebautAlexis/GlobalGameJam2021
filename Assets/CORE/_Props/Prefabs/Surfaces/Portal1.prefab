@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 8692176371655135933, guid: 1bf6eb064cf9c67479253063421446b4,
         type: 3}
       propertyPath: doBounce
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bf6eb064cf9c67479253063421446b4, type: 3}

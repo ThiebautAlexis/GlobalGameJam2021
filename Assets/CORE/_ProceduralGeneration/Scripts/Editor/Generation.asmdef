@@ -1,0 +1,17 @@
+{
+    "name": "Generation",
+    "references": [
+        "GUID:15fc7096c7cbb0d478511121bb4fb445"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
