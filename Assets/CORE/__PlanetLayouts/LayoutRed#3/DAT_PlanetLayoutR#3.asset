@@ -10,30 +10,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
-  m_Name: DAT_PlanetLayout
+  m_Name: DAT_PlanetLayoutR#3
   m_EditorClassIdentifier: 
   planet: {fileID: 3403559222081048338, guid: 83d6e7762a699ea4a86fa3da4e87fa31, type: 3}
   surfacesArches:
-  - start: {x: 3.544452, y: 3.5080535}
-    end: {x: -0.12432742, y: 4.163232}
-    startTangent: {x: -0.60372543, y: 1.3527834}
-    endTangent: {x: 0.8349893, y: 0.7557235}
-  - start: {x: 4.276931, y: -1.0955259}
-    end: {x: 3.7775998, y: 1.7764747}
-    startTangent: {x: -0.46522903, y: 1.0060077}
-    endTangent: {x: -0.49980354, y: -0.9181584}
+  - start: {x: 2.1256075, y: 4.4234376}
+    end: {x: -1.0091987, y: 3.8581038}
+    startTangent: {x: -1.1682135, y: 0.51368093}
+    endTangent: {x: 1.1858869, y: 0.4963646}
+  - start: {x: 3.926034, y: 2.1998577}
+    end: {x: 3.0300364, y: 4.156473}
+    startTangent: {x: 0.022975922, y: 0.6856227}
+    endTangent: {x: 0.61391497, y: -0.5214925}
   - start: {x: 0.5454514, y: -4.101505}
-    end: {x: 3.9429398, y: -3.1759865}
-    startTangent: {x: 0.752856, y: -0.5711374}
-    endTangent: {x: -0.8705082, y: -1.3948243}
-  - start: {x: -4.4264946, y: -1.2351959}
-    end: {x: -1.9128776, y: -4.5586634}
-    startTangent: {x: -0.37491798, y: -1.3092198}
-    endTangent: {x: -2.6424222, y: -0.6508074}
+    end: {x: 3.0432796, y: -3.9423642}
+    startTangent: {x: 0.86947834, y: -0.5211568}
+    endTangent: {x: -0.80386686, y: -0.66177034}
+  - start: {x: -4.4875207, y: -1.464042}
+    end: {x: -4.048774, y: -3.9178948}
+    startTangent: {x: -0.2376113, y: -1.4312708}
+    endTangent: {x: -0.4149866, y: 0.569705}
   - start: {x: -2.6833758, y: 3.8721337}
-    end: {x: -4.221593, y: 2.302585}
+    end: {x: -4.175824, y: 2.3178415}
     startTangent: {x: -1.1948369, y: -0.4368248}
     endTangent: {x: -0.074599266, y: 0.36369467}
+  - start: {x: 4.197947, y: -1.0403241}
+    end: {x: 3.6121302, y: -3.4806862}
+    startTangent: {x: 0.16979218, y: -1.615368}
+    endTangent: {x: 0.49916458, y: 0.44123006}
   layoutZones:
   - {fileID: 11400000, guid: 3bed718f03330b64985190dc68d248b5, type: 2}
   - {fileID: 11400000, guid: d26770876efe2cf4188e061b380c8e0a, type: 2}

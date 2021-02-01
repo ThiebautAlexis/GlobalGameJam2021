@@ -15,10 +15,10 @@ MonoBehaviour:
   planet: {fileID: 3415482290707423726, guid: a1c3175f10ac60a44b4ca3da069ecd77, type: 3}
   surfacesArches:
   - start: {x: 3.8614838, y: 2.5693715}
-    end: {x: 0.32674092, y: 4.292187}
+    end: {x: 0.9000343, y: 4.2367067}
     startTangent: {x: -0.40100074, y: 0.86140823}
-    endTangent: {x: 0.6683343, y: 0.23762989}
-  - start: {x: -0.6386291, y: 4.3664465}
+    endTangent: {x: 0.7977879, y: 0.108177185}
+  - start: {x: -0.916029, y: 4.292473}
     end: {x: -3.742669, y: 2.79215}
     startTangent: {x: -0.698038, y: -0.044555187}
     endTangent: {x: 0.5940747, y: 0.7871485}
@@ -27,16 +27,16 @@ MonoBehaviour:
     startTangent: {x: -0.60549736, y: -0.7478641}
     endTangent: {x: -0.44237947, y: 2.0457008}
   - start: {x: -4.3772683, y: -2.277968}
-    end: {x: -0.5777806, y: -4.2224274}
-    startTangent: {x: 0.15333557, y: -0.8589134}
-    endTangent: {x: -1.6268989, y: -0.60096073}
-  - start: {x: 0.81704223, y: -4.1576214}
-    end: {x: 4.8186436, y: -1.4938985}
-    startTangent: {x: 1.244747, y: -0.6567998}
-    endTangent: {x: -0.91950226, y: -1.7327954}
+    end: {x: -1.3914871, y: -4.3148937}
+    startTangent: {x: 0.41224217, y: -1.00686}
+    endTangent: {x: -1.2015519, y: -0.21260071}
+  - start: {x: 2.1670556, y: -4.194608}
+    end: {x: 4.744671, y: -1.4938984}
+    startTangent: {x: 0.9303596, y: 0.5082803}
+    endTangent: {x: -0.6605954, y: -1.3999152}
   - start: {x: 4.818885, y: -1.2067676}
     end: {x: 4.1920924, y: 2.164352}
-    startTangent: {x: 0.19375896, y: 1.5866573}
+    startTangent: {x: 0.26773167, y: 0.9024042}
     endTangent: {x: 0.5357132, y: -0.8839195}
   layoutZones:
   - {fileID: 11400000, guid: 062062d0c69f39a4980f2a67d85b2599, type: 2}

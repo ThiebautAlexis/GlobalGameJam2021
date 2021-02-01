@@ -14,30 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 8610341494958242666, guid: f5cc20afe62ddfb42b0777233b347c41, type: 3}
   surfacesArches:
-  - start: {x: 0.26791406, y: 4.6369786}
-    end: {x: 3.9774976, y: 2.5348816}
-    startTangent: {x: 1.0922662, y: 0.26791525}
-    endTangent: {x: -0.22669625, y: 1.6074858}
+  - start: {x: -0.8831607, y: 4.472539}
+    end: {x: 2.6985252, y: 4.1427326}
+    startTangent: {x: 1.2018924, y: 0.3044567}
+    endTangent: {x: -0.7200148, y: 0.40159655}
   - start: {x: -4.266021, y: 1.999053}
-    end: {x: -0.10304344, y: 4.61637}
-    startTangent: {x: 0.30913138, y: 0.9892237}
-    endTangent: {x: -2.5967083, y: -0.123654366}
+    end: {x: -2.0945868, y: 4.1047816}
+    startTangent: {x: 0.2725892, y: 0.82478476}
+    endTangent: {x: -0.84268904, y: -0.32463598}
   - start: {x: -4.3072386, y: -2.658535}
     end: {x: -4.451499, y: 1.6693133}
     startTangent: {x: -0.53583, y: 1.1747031}
     endTangent: {x: -0.47400188, y: -1.9578376}
-  - start: {x: -0.7006997, y: -4.533935}
-    end: {x: -4.1423664, y: -3.2355795}
-    startTangent: {x: -0.9686141, y: -0.18547773}
-    endTangent: {x: 1.0922661, y: -1.422009}
-  - start: {x: 4.121758, y: -3.1531463}
-    end: {x: 0.5564394, y: -2.0402694}
-    startTangent: {x: -1.7105308, y: -0.8243501}
-    endTangent: {x: 0.8449606, y: -1.5250533}
+  - start: {x: -2.2537372, y: -4.479121}
+    end: {x: -4.0015516, y: -3.1678483}
+    startTangent: {x: -1.0416985, y: 0.19821358}
+    endTangent: {x: 0.28077698, y: -0.5826471}
+  - start: {x: 4.0486727, y: -3.0983331}
+    end: {x: 1.7623278, y: -3.2826996}
+    startTangent: {x: -0.85179234, y: -0.769537}
+    endTangent: {x: 0.49781072, y: -0.35570717}
   - start: {x: 3.8538435, y: -0.061827183}
-    end: {x: 4.348457, y: -2.8646212}
-    startTangent: {x: 1.051048, y: -0.844959}
-    endTangent: {x: 0.45339298, y: 0.70069647}
+    end: {x: 4.732148, y: -1.731817}
+    startTangent: {x: 0.4115622, y: -0.16893129}
+    endTangent: {x: 0.08797169, y: 0.6276126}
   layoutZones:
   - {fileID: 11400000, guid: 0467d50dcd52fe2438ef20bbebcb8194, type: 2}
   - {fileID: 11400000, guid: 8f94a0dfe65d0c14799ca694e60ef691, type: 2}

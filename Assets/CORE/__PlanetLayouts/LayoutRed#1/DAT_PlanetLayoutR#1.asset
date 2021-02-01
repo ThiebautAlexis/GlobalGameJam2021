@@ -10,30 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
-  m_Name: DAT_PlanetLayout
+  m_Name: DAT_PlanetLayoutR#1
   m_EditorClassIdentifier: 
   planet: {fileID: 8331949101160025551, guid: 4895ad636d6981749a45dde1986ca006, type: 3}
   surfacesArches:
-  - start: {x: 1.517567, y: 3.0790896}
+  - start: {x: 0.84424824, y: 4.0169263}
     end: {x: -1.5158874, y: 4.0539966}
-    startTangent: {x: 0.3452735, y: 1.3805714}
-    endTangent: {x: 0.7764523, y: 0.49556017}
+    startTangent: {x: -0.70077544, y: 0.4547572}
+    endTangent: {x: 0.5720516, y: 0.24306536}
   - start: {x: 4.3703146, y: -1.1130354}
-    end: {x: 3.2698255, y: 2.1149914}
-    startTangent: {x: 0.5795026, y: 1.6888769}
-    endTangent: {x: 1.2102871, y: 0.30750418}
-  - start: {x: -1.2981176, y: -3.8462412}
+    end: {x: 4.5288363, y: 1.2966347}
+    startTangent: {x: 0.42842197, y: 1.0216013}
+    endTangent: {x: 0.21566916, y: -0.9640966}
+  - start: {x: -0.16790342, y: -4.375277}
     end: {x: 3.4702296, y: -2.5992804}
-    startTangent: {x: 0.5366852, y: -1.0269191}
-    endTangent: {x: -0.8705082, y: -1.3948247}
+    startTangent: {x: 1.0777445, y: 0.12734127}
+    endTangent: {x: -0.94264936, y: -1.3467307}
   - start: {x: -4.473134, y: -1.240378}
-    end: {x: -2.7300253, y: -2.0453598}
-    startTangent: {x: 0.08207703, y: -1.2674388}
-    endTangent: {x: -0.22336578, y: -0.5908904}
+    end: {x: -3.535603, y: -2.321902}
+    startTangent: {x: -0.002087593, y: -0.44983733}
+    endTangent: {x: -0.72835493, y: 0.08242774}
   - start: {x: -2.402798, y: 3.4953575}
-    end: {x: -4.614402, y: 0.32250768}
+    end: {x: -4.6865425, y: -0.38688147}
     startTangent: {x: -1.1948369, y: -0.4368248}
-    endTangent: {x: -0.074599266, y: 0.3636946}
+    endTangent: {x: -0.050551414, y: 1.1572489}
   layoutZones:
   - {fileID: 11400000, guid: 8a6102f0fa81748409ae34d66e7116c4, type: 2}
   - {fileID: 11400000, guid: 1fb190b0bece34e4990cf5d241a0a5e1, type: 2}

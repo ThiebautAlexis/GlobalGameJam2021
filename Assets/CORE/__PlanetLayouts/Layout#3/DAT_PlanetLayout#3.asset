@@ -14,26 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 3722604321604481483, guid: bedeaf931402b5944814506c30f17607, type: 3}
   surfacesArches:
-  - start: {x: -3.229361, y: 3.6879683}
+  - start: {x: -3.4637616, y: 3.2956018}
     end: {x: -3.3822298, y: 1.4904742}
     startTangent: {x: -0.13376045, y: -0.11465192}
-    endTangent: {x: -0.45860815, y: 1.3758202}
-  - start: {x: -3.4777737, y: -1.9681907}
-    end: {x: -2.7898617, y: -4.203902}
-    startTangent: {x: -0.076435566, y: -0.43949962}
-    endTangent: {x: -0.80256367, y: 0.43949628}
+    endTangent: {x: -0.22318816, y: 0.7284155}
+  - start: {x: -3.4204476, y: -3.3057957}
+    end: {x: -1.8535388, y: -4.7389436}
+    startTangent: {x: 0.09554243, y: -0.5923686}
+    endTangent: {x: -0.6305857, y: 0.26751852}
   - start: {x: -1.0318658, y: -4.815379}
     end: {x: 2.0828428, y: -4.50964}
     startTangent: {x: 0.7643442, y: -0.28663063}
     endTangent: {x: -1.0891929, y: -0.49682808}
   - start: {x: 2.67521, y: -4.2230105}
-    end: {x: 3.6879683, y: -1.2802789}
-    startTangent: {x: 0.87899685, y: 0.68791056}
-    endTangent: {x: 0.6114764, y: -1.3184998}
-  - start: {x: 3.5350983, y: 1.8344305}
-    end: {x: 3.0191665, y: 4.719836}
-    startTangent: {x: 0.5350406, y: 1.6624515}
-    endTangent: {x: 0.51593184, y: -0.458611}
+    end: {x: 3.7743926, y: -2.8696814}
+    startTangent: {x: 0.48623323, y: 0.35333443}
+    endTangent: {x: -0.13289928, y: -0.47478533}
+  - start: {x: 3.5154793, y: 2.0894687}
+    end: {x: 3.56848, y: 3.9351034}
+    startTangent: {x: 0.29962277, y: 0.5638261}
+    endTangent: {x: 0.30013084, y: -0.6155572}
+  - start: {x: 3.004517, y: 4.695381}
+    end: {x: 1.3922106, y: 4.732224}
+    startTangent: {x: -0.46195817, y: 0.26516676}
+    endTangent: {x: 0.24039924, y: 0.26548767}
+  - start: {x: -1.2930031, y: 4.674391}
+    end: {x: -2.8059483, y: 4.4523406}
+    startTangent: {x: -0.38499033, y: 0.35612965}
+    endTangent: {x: 0.4153266, y: 0.4474125}
   layoutZones:
   - {fileID: 11400000, guid: 83e73c8ff07b73d4c89b140d4caed331, type: 2}
   - {fileID: 11400000, guid: 75a29b1ccd3baa9449cc4a07cab8a1aa, type: 2}

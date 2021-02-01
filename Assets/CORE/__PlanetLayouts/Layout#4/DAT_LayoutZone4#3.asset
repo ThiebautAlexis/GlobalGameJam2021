@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: DAT_LayoutZone4#3
   m_EditorClassIdentifier: 
   offsetPosition: {x: 2.78, y: -1.66}
-  radius: 1.65
-  spacing: 0.73
-  count: {x: 3, y: 8}
+  radius: 1.47
+  spacing: 0.65
+  count: {x: 1, y: 3}

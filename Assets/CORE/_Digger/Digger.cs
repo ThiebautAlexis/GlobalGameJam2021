@@ -251,8 +251,10 @@ namespace GlobalGameJam2021
 
             ColliderDistance2D _distance = collider.Distance(_collider);
             float _angle = Random.Range(attributes.BounceRange.x, attributes.BounceRange.y);
-            movement = Quaternion.AngleAxis(_angle, Vector3.forward) * _distance.normal;
-
+            //movement = Quaternion.AngleAxis(_angle, Vector3.forward) * _distance.normal;
+            movement *= -1;
+            movement += new Vector2(Mathf.Cos(Mathf.Deg2Rad * _angle), Mathf.Sin(Mathf.Deg2Rad * _angle));
+            movement = movement.normalized;
             _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
         }
