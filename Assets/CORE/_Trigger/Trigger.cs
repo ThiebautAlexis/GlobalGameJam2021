@@ -26,7 +26,7 @@ namespace GlobalGameJam2021
 
         public bool Compare(Trigger _trigger) => GetInstanceID() == _trigger.GetInstanceID();
 
-        private void Awake()
+        protected virtual void Awake()
         {
             if (!collider)
                 collider = GetComponent<Collider2D>();

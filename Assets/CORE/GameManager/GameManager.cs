@@ -17,6 +17,7 @@ namespace GlobalGameJam2021
     {
         #region Fields / Properties
         public static GameManager Instance = null;
+        private static bool isMusicInitialized = false;
 
         [HorizontalLine(1, order = 0), Section("GAME MANAGER", order = 1)]
 
@@ -34,8 +35,10 @@ namespace GlobalGameJam2021
 
         [SerializeField, Required] private TextMeshProUGUI scoreText = null;
         [SerializeField, Required] private TextMeshProUGUI oxygenText = null;
+        [SerializeField, Required] private TextMeshProUGUI endScreenScore = null;
         [SerializeField, Required] private Image oxygenGauge = null;
         [SerializeField, Required] private Image deathScreen = null;
+        [SerializeField, Required] private CanvasGroup endScreen = null;
         [SerializeField, Required] private GameObject tuto = null;
 
         [Space]
@@ -69,11 +72,15 @@ namespace GlobalGameJam2021
         #region Level Management
         private Transform actualPlanet = null;
         private GameObject planetToDestroy = null;
+        private bool isLevelCompleted = false;
+
+        private float oxygenValue = 1;
 
         // -----------------------
 
         public void CompleteLevel()
         {
+            isLevelCompleted = true;
             digger.CompleteLevel();
             tuto.SetActive(false);
         }
@@ -88,20 +95,19 @@ namespace GlobalGameJam2021
             camera.StartTravel(actualPlanet.position);
         }
 
-        public void DestroyPreviousPlanet() => Destroy(planetToDestroy);
+        public void DestroyPreviousPlanet()
+        {
+            isLevelCompleted = false;
+            Destroy(planetToDestroy);
+        }
 
         // -----------------------
-
-        /// <summary>
-        /// Reloads the whole game.
-        /// </summary>
-        public void ResetGame() => SceneManager.LoadScene(0, LoadSceneMode.Single);
 
         public void FillOxygenTank(float _value)
         {
             isDrainingOxygen = true;
             oxygenTank = _value;
-            oxygen = _value;
+            oxygenValue = _value;
             oxygenText.text = "100%";
 
             // Update UI.
@@ -112,18 +118,17 @@ namespace GlobalGameJam2021
 
         public void EmptyOxygenTank(float _value)
         {
-            oxygen -= _value;
-            oxygenGauge.fillAmount = oxygen / oxygenTank;
-            oxygenText.text = (int)((oxygen / oxygenTank) * 100) + "%";
+            if (isLevelCompleted)
+                return;
 
-            if (oxygen < 0)
+            oxygenValue -= _value;
+            if (oxygenValue < 0)
             {
                 isDrainingOxygen = false;
-                oxygen = 0;
-
-                digger.Kill();
+                oxygenValue = 0;
 
                 // Restart game.
+                digger.Kill();
                 StartCoroutine(DoResetGame());
             }
         }
@@ -141,7 +146,25 @@ namespace GlobalGameJam2021
                 yield return null;
             }
 
-            ResetGame();
+            // Show end screen title.
+            _var = 0;
+            endScreen.gameObject.SetActive(true);
+            endScreenScore.text = scoreText.text;
+            while (true)
+            {
+                _var += Time.deltaTime;
+                endScreen.alpha = _var / attributes.ResetGameTime;
+                if (_var > attributes.ResetGameTime)
+                    break;
+
+                yield return null;
+            }
+
+            while (!attributes.ActionInput.triggered && !attributes.ActionAltInput.triggered)
+                yield return null;
+
+            yield return new WaitForSeconds(.25f);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
         }
         #endregion
 
@@ -257,9 +280,17 @@ namespace GlobalGameJam2021
         {
             // Start the game.
             actualPlanet = generator.GenerateRandomLayout();
+            if (!isMusicInitialized)
+            {
+                isMusicInitialized = true;
+                DontDestroyOnLoad(audioSource.gameObject);
+            }
+            else
+                Destroy(audioSource.gameObject);
 
-            Time.timeScale = 0;
             scoreText.text = string.Empty;
+            
+            Time.timeScale = 0;
             while (!attributes.ActionInput.triggered && !attributes.ActionAltInput.triggered)
                 yield return null;
 
@@ -279,8 +310,13 @@ namespace GlobalGameJam2021
 
         private void Update()
         {
+            // Oxygen UI update.
             if (isDrainingOxygen)
                 EmptyOxygenTank(Time.deltaTime);
+
+            oxygen = Mathf.MoveTowards(oxygen, oxygenValue, Time.deltaTime * attributes.OxygenGaugeSpeed);
+            oxygenGauge.fillAmount = oxygen / oxygenTank;
+            oxygenText.text = (int)((oxygen / oxygenTank) * 100) + "%";
 
             // Quit button.
             if (attributes.QuitInput.triggered)

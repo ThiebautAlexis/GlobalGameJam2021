@@ -13,7 +13,6 @@ namespace GlobalGameJam2021
     {
         [SerializeField, Required] private new Renderer renderer;
         private Texture2D cloneTexture;
-        
 
         float widthWorld, heightWorld;
         int widthPixel, heightPixel;
@@ -103,10 +102,10 @@ namespace GlobalGameJam2021
 
         public override void OnUpdate(Digger _digger) => MakeAHole(_digger.Collider);
 
-        void Start()
+        protected override void Awake()
         {
+            base.Awake();
             cloneTexture = Instantiate(renderer.material.mainTexture) as Texture2D;
-            //cloneTexture.alphaIsTransparency = true;
             renderer.material.mainTexture = cloneTexture;
         }
     }

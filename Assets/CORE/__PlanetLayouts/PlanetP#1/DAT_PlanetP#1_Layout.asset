@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetP#1_Layout
+  m_EditorClassIdentifier: 
+  planet: {fileID: 4992005438356295401, guid: 8a94cb4bf6c5dc94e8a7a57f63815659, type: 3}
+  surfacesArches:
+  - start: {x: -3.517395, y: 4.145501}
+    end: {x: 3.5488002, y: 4.3339334}
+    startTangent: {x: 1.3190229, y: 0.078513145}
+    endTangent: {x: -0.8950503, y: 0.21983767}
+  - start: {x: 4.0983925, y: -3.3132606}
+    end: {x: 4.08269, y: 3.7529354}
+    startTangent: {x: 0.12562132, y: 0.42397213}
+    endTangent: {x: 0.14132404, y: -0.9107542}
+  - start: {x: 3.502664, y: -3.9124212}
+    end: {x: -3.2499344, y: -4.06201}
+    startTangent: {x: -1.8924212, y: -0.3038001}
+    endTangent: {x: 1.7301049, y: 0.012564182}
+  - start: {x: -3.9415638, y: -3.7258675}
+    end: {x: -4.0467, y: 3.4876165}
+    startTangent: {x: -0.3727224, y: 2.2629578}
+    endTangent: {x: -0.29285383, y: -1.5441346}
+  layoutZones:
+  - {fileID: 11400000, guid: 4f526ae2bc88d8749bea8a130bd6465b, type: 2}
+  props:
+  - {fileID: 11400000, guid: 50462b5556262854e9a7854454f62a39, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

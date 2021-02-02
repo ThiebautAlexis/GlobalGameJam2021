@@ -29,6 +29,7 @@ namespace GlobalGameJam2021
         [HorizontalLine(1)]
 
         [MinMax(-45, 45)] public Vector2 BounceRange = new Vector2(-10, 10);
+        [Range(10, 15)] public float GoingBackDistance = 10;
 
         [Space]
 

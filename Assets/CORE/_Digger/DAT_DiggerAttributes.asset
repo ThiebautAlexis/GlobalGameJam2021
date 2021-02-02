@@ -207,15 +207,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  BounceRange: {x: -45, y: 45}
+  BounceRange: {x: -15, y: 15}
   LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   PlanetShockShake: 1
   DiggingInShake: 0.4
   DiggingOutShake: 0.15
-  LightOriginalSize: 10
-  LightExtendedSize: 20
+  LightOriginalSize: 2
+  LightExtendedSize: 3
   LightLerpSpeed: 10
   DigFX: {fileID: 3927844079346959721, guid: fbb34e09bd3f4904fba294a8a4a7ca24, type: 3}
   DigInClips:

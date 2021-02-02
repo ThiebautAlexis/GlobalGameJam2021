@@ -33,6 +33,8 @@ namespace GlobalGameJam2021
         [SerializeField, Required] private ParticleSystem dirtFX = null;
         [SerializeField, Required] private SpriteMask lightMask = null;
 
+        [SerializeField] private DiggerTool[] specials = new DiggerTool[] { };
+
         public Collider2D Collider => collider;
 
         [HorizontalLine(1)]
@@ -79,6 +81,8 @@ namespace GlobalGameJam2021
         private Quaternion rotationLerpTo = new Quaternion();
         private float rotationLerpVar = 0;
         private bool isLerping = false;
+
+        private bool isGoingBack = true;
 
         // -----------------------
 
@@ -128,6 +132,7 @@ namespace GlobalGameJam2021
                 lightLerpValue = attributes.LightOriginalSize;
 
                 isLevelCompleted = false;
+                hasPickaxe = false;
                 _planet.Activate();
 
                 CameraDigger.Instance.Shake(attributes.DiggingInShake);
@@ -144,6 +149,7 @@ namespace GlobalGameJam2021
 
             speedVar = 0;
 
+            isGoingBack = false;
             isLerping = false;
             state = DiggerState.Digging;
 
@@ -175,6 +181,14 @@ namespace GlobalGameJam2021
 
                 GameManager.Instance.OnLeaveEarth(movement);
                 _planet.DisablePlanet();
+
+                // Work in progress.
+                /*for (int _i = 0; _i < specials.Length; _i++)
+                {
+                    DiggerTool _instance = Instantiate(specials[_i], transform.position, Quaternion.identity);
+                    _instance.Initialized(movement, Quaternion.AngleAxis(Random.Range(40, 45) * ((_i % 2 == 0) ? 1 : -1), Vector3.forward) * movement, 30, 20);
+                }*/
+
                 return;
             }
 
@@ -246,15 +260,12 @@ namespace GlobalGameJam2021
 
         public void Bounce(Collider2D _collider)
         {
-            if (isLevelCompleted)
+            if (isLevelCompleted || (state != DiggerState.Digging))
                 return;
 
-            ColliderDistance2D _distance = collider.Distance(_collider);
             float _angle = Random.Range(attributes.BounceRange.x, attributes.BounceRange.y);
-            //movement = Quaternion.AngleAxis(_angle, Vector3.forward) * _distance.normal;
-            movement *= -1;
-            movement += new Vector2(Mathf.Cos(Mathf.Deg2Rad * _angle), Mathf.Sin(Mathf.Deg2Rad * _angle));
-            movement = movement.normalized;
+            movement = Quaternion.AngleAxis(_angle, Vector3.forward) * (collider.bounds.center - _collider.bounds.center).normalized;
+
             _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
         }
@@ -290,6 +301,16 @@ namespace GlobalGameJam2021
             speed = attributes.AboutTurnSpeed.Evaluate(speedVar);
 
             Move();
+
+            // Makes the character goes back in scope if leaving too much.
+            if (!isGoingBack && (transform.position.magnitude > attributes.GoingBackDistance))
+            {
+                isGoingBack = true;
+
+                movement *= -1;
+                float _angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, _angle - 90));
+            }
         }
 
         private void TravelMove()

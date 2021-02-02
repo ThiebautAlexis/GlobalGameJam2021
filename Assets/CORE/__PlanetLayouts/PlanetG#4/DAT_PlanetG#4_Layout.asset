@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetG#4_Layout
+  m_EditorClassIdentifier: 
+  planet: {fileID: 8610341494958242666, guid: f5cc20afe62ddfb42b0777233b347c41, type: 3}
+  surfacesArches:
+  - start: {x: -0.8831607, y: 4.472539}
+    end: {x: 2.6985252, y: 4.1427326}
+    startTangent: {x: 1.2018924, y: 0.3044567}
+    endTangent: {x: -0.7200148, y: 0.40159655}
+  - start: {x: -4.266021, y: 1.999053}
+    end: {x: -2.0945868, y: 4.1047816}
+    startTangent: {x: 0.2725892, y: 0.82478476}
+    endTangent: {x: -0.84268904, y: -0.32463598}
+  - start: {x: -4.3072386, y: -2.658535}
+    end: {x: -4.451499, y: 1.6693133}
+    startTangent: {x: -0.53583, y: 1.1747031}
+    endTangent: {x: -0.47400188, y: -1.9578376}
+  - start: {x: -2.2537372, y: -4.479121}
+    end: {x: -4.0015516, y: -3.1678483}
+    startTangent: {x: -1.0416985, y: 0.19821358}
+    endTangent: {x: 0.28077698, y: -0.5826471}
+  - start: {x: 4.0486727, y: -3.0983331}
+    end: {x: 1.7623278, y: -3.2826996}
+    startTangent: {x: -0.85179234, y: -0.769537}
+    endTangent: {x: 0.49781072, y: -0.35570717}
+  - start: {x: 3.8538435, y: -0.061827183}
+    end: {x: 4.732148, y: -1.731817}
+    startTangent: {x: 0.4115622, y: -0.16893129}
+    endTangent: {x: 0.08797169, y: 0.6276126}
+  layoutZones:
+  - {fileID: 11400000, guid: 0467d50dcd52fe2438ef20bbebcb8194, type: 2}
+  - {fileID: 11400000, guid: 8f94a0dfe65d0c14799ca694e60ef691, type: 2}
+  - {fileID: 11400000, guid: 0406cf7b645eeb4469db1f8f9ed96e44, type: 2}
+  - {fileID: 11400000, guid: 922570546a691b94cb2dc24b6d4a6f44, type: 2}
+  props:
+  - {fileID: 11400000, guid: 1153378b69f5a0042b2277590cb07de0, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}

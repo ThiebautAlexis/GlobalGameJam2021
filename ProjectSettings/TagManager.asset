@@ -45,8 +45,11 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Other
+  - name: Front
     uniqueID: 1212751627
+    locked: 0
+  - name: FXs
+    uniqueID: 2462206401
     locked: 0
   - name: UI
     uniqueID: 2132362823

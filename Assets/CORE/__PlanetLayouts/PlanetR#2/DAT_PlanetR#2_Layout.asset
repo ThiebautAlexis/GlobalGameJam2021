@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60e8a1e62ba06848b3e4384623dc5f3, type: 3}
+  m_Name: DAT_PlanetR#2_Layout
+  m_EditorClassIdentifier: 
+  planet: {fileID: 8121509028276353397, guid: a31b6888aca3e8c4b87b903be964f166, type: 3}
+  surfacesArches:
+  - start: {x: 2.1665053, y: 4.1616683}
+    end: {x: -3.2273293, y: 4.345645}
+    startTangent: {x: -1.220762, y: 1.0465627}
+    endTangent: {x: 0.820693, y: 0.5202513}
+  - start: {x: 3.4783003, y: -1.4898888}
+    end: {x: 4.5816164, y: 1.5751923}
+    startTangent: {x: 1.3473356, y: 0.6667235}
+    endTangent: {x: 0.08844471, y: -0.6829488}
+  - start: {x: -1.2495158, y: -1.2824854}
+    end: {x: 0.74027413, y: -1.0639153}
+    startTangent: {x: 0.6217389, y: -0.2006849}
+    endTangent: {x: -0.84144795, y: -0.52609766}
+  - start: {x: -1.8284379, y: -4.140441}
+    end: {x: -1.4480398, y: -1.692491}
+    startTangent: {x: 0.4779284, y: 0.7430129}
+    endTangent: {x: -0.023627639, y: -0.99391913}
+  - start: {x: -4.2929335, y: 2.7631884}
+    end: {x: -4.490812, y: -3.2137394}
+    startTangent: {x: -0.44884586, y: -1.0541267}
+    endTangent: {x: -0.112347126, y: 1.627347}
+  - start: {x: 2.4436462, y: 3.9967883}
+    end: {x: 4.489793, y: 1.8440189}
+    startTangent: {x: 0.5216789, y: -0.1138885}
+    endTangent: {x: -0.3235159, y: 0.9938421}
+  layoutZones:
+  - {fileID: 11400000, guid: 9cfffd0cec32dae4f9be354645781dc2, type: 2}
+  - {fileID: 11400000, guid: ae56b7fad00cab249871789b48c4395a, type: 2}
+  - {fileID: 11400000, guid: db807c4540db0b641b0c75f41217a910, type: 2}
+  - {fileID: 11400000, guid: c3b3912468360e746a1cb31dde3e9e86, type: 2}
+  props:
+  - {fileID: 11400000, guid: 164f11aa722d7f842bb2cdcc4cb42a37, type: 2}
+  options:
+  - {fileID: 11400000, guid: 4b4674112cdba704d9b348cf41b50106, type: 2}
