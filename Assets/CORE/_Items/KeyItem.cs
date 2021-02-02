@@ -26,7 +26,11 @@ namespace GlobalGameJam2021
             return base.OnEnter(_digger);
         }
 
-        private void Awake() => GameManager.Instance.IncreaseKeyItemCount();
+        protected override void Awake()
+        {
+            base.Awake();
+            GameManager.Instance.IncreaseKeyItemCount();
+        }
         #endregion
     }
 }

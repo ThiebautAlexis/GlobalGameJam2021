@@ -33,8 +33,6 @@ namespace GlobalGameJam2021
         [SerializeField, Required] private ParticleSystem dirtFX = null;
         [SerializeField, Required] private SpriteMask lightMask = null;
 
-        [SerializeField] private DiggerTool[] specials = new DiggerTool[] { };
-
         public Collider2D Collider => collider;
 
         [HorizontalLine(1)]
@@ -181,14 +179,6 @@ namespace GlobalGameJam2021
 
                 GameManager.Instance.OnLeaveEarth(movement);
                 _planet.DisablePlanet();
-
-                // Work in progress.
-                /*for (int _i = 0; _i < specials.Length; _i++)
-                {
-                    DiggerTool _instance = Instantiate(specials[_i], transform.position, Quaternion.identity);
-                    _instance.Initialized(movement, Quaternion.AngleAxis(Random.Range(40, 45) * ((_i % 2 == 0) ? 1 : -1), Vector3.forward) * movement, 30, 20);
-                }*/
-
                 return;
             }
 

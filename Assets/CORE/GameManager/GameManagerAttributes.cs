@@ -40,6 +40,7 @@ namespace GlobalGameJam2021
         public float ResetGameTime = 2;
         public float TrapOxgyenDecrease = 5;
         public float OxygenGaugeSpeed = 5;
+        [Range(0, 1)] public float OxygenEmptyTreshold = .33f;
 
         [Space]
 

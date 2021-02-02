@@ -30,6 +30,7 @@ namespace GlobalGameJam2021
 
         [SerializeField, Required] private Animator titleAnimator = null;
         [SerializeField, Required] private Animator scoreAnimator = null;
+        [SerializeField, Required] private Animator oxygenAnimator = null;
 
         [Space]
 
@@ -61,10 +62,18 @@ namespace GlobalGameJam2021
         private readonly int switchTitle_Hash = Animator.StringToHash("Switch");
         private readonly int scoreIncrease_Hash = Animator.StringToHash("Increase");
 
+        private readonly int oxygenFill_Hash = Animator.StringToHash("Fill");
+        private readonly int oxygenDecrease_Hash = Animator.StringToHash("Decrease");
+        private readonly int oxyenEmpty_Hash = Animator.StringToHash("IsEmpty");
+
         // -----------------------
 
         private void PlaySwitchTitle() => titleAnimator.SetTrigger(switchTitle_Hash);
         private void PlayScoreIncrease() => scoreAnimator.SetTrigger(scoreIncrease_Hash);
+
+        private void PlayOxygenFill() => oxygenAnimator.SetTrigger(oxygenFill_Hash);
+        private void PlayOxygenDecrease() => oxygenAnimator.SetTrigger(oxygenDecrease_Hash);
+        private void PlayOxgenEmpty(bool _isEmpty) => oxygenAnimator.SetBool(oxyenEmpty_Hash, _isEmpty);
         #endregion
 
         #region Methods
@@ -74,6 +83,7 @@ namespace GlobalGameJam2021
         private GameObject planetToDestroy = null;
         private bool isLevelCompleted = false;
 
+        private bool isOxygenEmpty = false;
         private float oxygenValue = 1;
 
         // -----------------------
@@ -110,11 +120,22 @@ namespace GlobalGameJam2021
             oxygenValue = _value;
             oxygenText.text = "100%";
 
+            if (isOxygenEmpty)
+            {
+                isOxygenEmpty = false;
+                PlayOxgenEmpty(false);
+                PlayOxygenFill();
+            }
+
             // Update UI.
             oxygenGauge.fillAmount = 1;
         }
 
-        public void EmptyOxygenTank() => EmptyOxygenTank(attributes.TrapOxgyenDecrease);
+        public void EmptyOxygenTank()
+        {
+            PlayOxygenDecrease();
+            EmptyOxygenTank(attributes.TrapOxgyenDecrease);
+        }
 
         public void EmptyOxygenTank(float _value)
         {
@@ -122,6 +143,12 @@ namespace GlobalGameJam2021
                 return;
 
             oxygenValue -= _value;
+            if (!isOxygenEmpty && ((oxygenValue / oxygenTank) < attributes.OxygenEmptyTreshold))
+            {
+                isOxygenEmpty = true;
+                PlayOxgenEmpty(true);
+            }
+
             if (oxygenValue < 0)
             {
                 isDrainingOxygen = false;
