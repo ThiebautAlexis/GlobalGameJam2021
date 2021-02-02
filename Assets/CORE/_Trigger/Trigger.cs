@@ -15,6 +15,8 @@ namespace GlobalGameJam2021
         [HorizontalLine(1, order = 0), Section("TRIGGER", order = 1)]
 
         [SerializeField] protected new Collider2D collider = null;
+        [SerializeField] protected float spacingRange = 1.0f;
+        public float SpacingRange => spacingRange; 
         #endregion
 
         #region Methods

@@ -20,9 +20,6 @@ namespace GlobalGameJam2021
         public float Radius => radius;
 
         [HorizontalLine(1, order = 0), Section("Zone options", order = 1), Space(order = 2)]
-        [SerializeField, Range(.1f, 2.5f)] private float spacing = 1.0f;
-        public float Spacing => spacing;
-
         [SerializeField, MinMax(1, 20)] private Vector2Int count = new Vector2Int(1, 5);
         public int Count => Random.Range(count.x, count.y);
         #endregion

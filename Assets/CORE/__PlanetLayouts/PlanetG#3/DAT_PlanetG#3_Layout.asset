@@ -39,9 +39,9 @@ MonoBehaviour:
     startTangent: {x: -0.46195817, y: 0.26516676}
     endTangent: {x: 0.24039924, y: 0.26548767}
   - start: {x: -1.2930031, y: 4.674391}
-    end: {x: -2.8059483, y: 4.4523406}
+    end: {x: -2.521793, y: 4.566003}
     startTangent: {x: -0.38499033, y: 0.35612965}
-    endTangent: {x: 0.4153266, y: 0.4474125}
+    endTangent: {x: 0.33955193, y: 0.40952492}
   layoutZones:
   - {fileID: 11400000, guid: 83e73c8ff07b73d4c89b140d4caed331, type: 2}
   - {fileID: 11400000, guid: 75a29b1ccd3baa9449cc4a07cab8a1aa, type: 2}

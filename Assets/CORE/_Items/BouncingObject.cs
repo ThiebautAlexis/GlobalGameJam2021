@@ -22,6 +22,15 @@ namespace GlobalGameJam2021
                 _digger.Bounce(collider);
             return true;
         }
+
+        private void OnDrawGizmos()
+        {
+            if(doBounce)
+            {
+                Gizmos.color = Color.red;
+                Gizmos.DrawWireSphere(transform.position, spacingRange);
+            }
+        }
         #endregion
     }
 }

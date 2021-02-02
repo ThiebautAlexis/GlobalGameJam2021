@@ -38,9 +38,6 @@ namespace GlobalGameJam2021
 		{
 			Handles.color = Color.green; 
 			Handles.DrawWireDisc(offsetPosition.vector2Value, Vector3.forward, radius.floatValue);
-			Handles.color = Color.red; 
-			Handles.DrawWireDisc(offsetPosition.vector2Value, Vector3.forward, spacing.floatValue);
-
 		}
 		#endregion
 	}

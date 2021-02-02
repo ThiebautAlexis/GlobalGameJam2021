@@ -30,6 +30,12 @@ namespace GlobalGameJam2021
             Destroy(gameObject);
             return false;
         }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(transform.position, spacingRange);
+        }
         #endregion
     }
 }

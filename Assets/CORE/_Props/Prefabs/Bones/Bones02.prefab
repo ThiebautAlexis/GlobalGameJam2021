@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: value
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 6874955602740445111, guid: 334c70fe621edc34185fc9003b228709,
+        type: 3}
+      propertyPath: spacingRange
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7344453655911720782, guid: 334c70fe621edc34185fc9003b228709,
         type: 3}
       propertyPath: m_RootOrder

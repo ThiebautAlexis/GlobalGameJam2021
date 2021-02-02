@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 113561369932645646}
+  spacingRange: 0.4
   fx: 1
   sound: 2
   value: 5000

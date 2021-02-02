@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Amber02
       objectReference: {fileID: 0}
+    - target: {fileID: 5840079475934441504, guid: 685db811f48777a41b18825e36a98a60,
+        type: 3}
+      propertyPath: spacingRange
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 7748481962596903129, guid: 685db811f48777a41b18825e36a98a60,
         type: 3}
       propertyPath: m_RootOrder

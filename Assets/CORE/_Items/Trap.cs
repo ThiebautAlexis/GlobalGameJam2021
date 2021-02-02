@@ -4,6 +4,7 @@
 //
 // ====================================================================================== //
 
+using UnityEngine;
 namespace GlobalGameJam2021
 {
 	public class Trap : BouncingObject

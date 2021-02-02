@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: value
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 16251442779410242, guid: b05fbbcc55c3f524db65c252e42877d0,
+        type: 3}
+      propertyPath: spacingRange
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2529932895353218956, guid: b05fbbcc55c3f524db65c252e42877d0,
         type: 3}
       propertyPath: m_Sprite

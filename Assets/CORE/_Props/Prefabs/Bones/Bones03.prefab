@@ -68,6 +68,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -53158409815226039, guid: 892fcb941a7c2d64e911021f5a639b78,
         type: 3}
+    - target: {fileID: 4214034717081869155, guid: 0d9f5cc8e5fef334e9817e30e4afc884,
+        type: 3}
+      propertyPath: spacingRange
+      value: 0.55
+      objectReference: {fileID: 0}
     - target: {fileID: 6903500520360628266, guid: 0d9f5cc8e5fef334e9817e30e4afc884,
         type: 3}
       propertyPath: m_Name
