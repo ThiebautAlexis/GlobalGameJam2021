@@ -238,6 +238,10 @@ namespace GlobalGameJam2021
                     _clip = attributes.LootAmberClip;
                     break;
 
+                case LootSound.Rock:
+                    _clip = attributes.destroyRockAudioClips[Random.Range(0, attributes.destroyRockAudioClips.Length)];
+                    break;
+
                 default:
                     _clip = attributes.LootBoneClips[Random.Range(0, attributes.LootBoneClips.Length)];
                     break;
@@ -289,6 +293,10 @@ namespace GlobalGameJam2021
 
                 case LootFX.RedOre:
                     _instance = attributes.LootRedOreFX;
+                    break;
+
+                case LootFX.Rock:
+                    _instance = attributes.destroyRockFX;
                     break;
 
                 default:

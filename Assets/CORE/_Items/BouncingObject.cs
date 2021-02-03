@@ -14,7 +14,7 @@ namespace GlobalGameJam2021
         #region Content
         [HorizontalLine(1, order = 0), Section("BOUCNING ITEM", order = 1)]
 
-        [SerializeField] private bool doBounce = false;
+        [SerializeField] protected bool doBounce = false;
 
         public override bool OnEnter(Digger _digger)
         {

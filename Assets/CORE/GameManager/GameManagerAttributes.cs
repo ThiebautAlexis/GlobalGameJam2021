@@ -14,7 +14,8 @@ namespace GlobalGameJam2021
     {
         Bone,
         Ore,
-        Amber
+        Amber, 
+        Rock
     }
 
     public enum LootFX
@@ -28,7 +29,8 @@ namespace GlobalGameJam2021
         LightGreenOre,
         OrangeOre,
         PinkOre,
-        RedOre
+        RedOre, 
+        Rock
     }
 
     [CreateAssetMenu(fileName = "DAT_GameManagerAttributes", menuName = "Datas/GameManagerAttributes", order = 50)]
@@ -52,11 +54,17 @@ namespace GlobalGameJam2021
         public AudioClip[] LootOreClips = new AudioClip[] { };
         public AudioClip LootAmberClip = null;
 
+        [Space]
+        public AudioClip[] destroyRockAudioClips = new AudioClip[] { };
+
         [HorizontalLine(1)]
 
         public GameObject LootGenericFX = null;
         public GameObject LootAmberFX = null;
         public GameObject LootSparkleFX = null;
+
+        [Space]
+        public GameObject destroyRockFX = null; 
 
         [Space]
 

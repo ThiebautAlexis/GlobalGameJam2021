@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: DAT_PlanetR#3_Zone#2
   m_EditorClassIdentifier: 
   offsetPosition: {x: 1.72, y: 2.66}
-  radius: 1.91
-  spacing: 0.7
-  count: {x: 2, y: 5}
+  radius: 1.9
+  count: {x: 3, y: 6}

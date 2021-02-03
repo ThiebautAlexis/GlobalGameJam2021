@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetPosition: {x: 2.78, y: -1.66}
   radius: 1.5
-  spacing: 0.9
-  count: {x: 1, y: 2}
+  count: {x: 1, y: 3}

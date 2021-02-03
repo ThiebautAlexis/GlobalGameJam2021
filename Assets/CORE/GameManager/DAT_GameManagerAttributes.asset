@@ -26,11 +26,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 18ad65f0e40e2824e92344315cbda249, type: 3}
   - {fileID: 8300000, guid: 0b564905bac1e954fab47018a90a4a17, type: 3}
   LootAmberClip: {fileID: 8300000, guid: 9245ca4e3d7c65e43bb582024f18910f, type: 3}
+  destroyRockAudioClips:
+  - {fileID: 8300000, guid: e2c8dee8bbfd0114089222971aa692c6, type: 3}
+  - {fileID: 8300000, guid: 35f53bd1a3d75094abd0d1c9465b74b7, type: 3}
+  - {fileID: 8300000, guid: e32a945f8b5f3cf478333a7810d02a2a, type: 3}
   LootGenericFX: {fileID: 5045160288217552832, guid: 03b74879184f02342a7ce6aa3b40148f,
     type: 3}
   LootAmberFX: {fileID: 3888113838223733654, guid: 4c0160a261db6c44f8f49dc5d89954bf,
     type: 3}
   LootSparkleFX: {fileID: 5833897945311383022, guid: e78959f253046514bbbb3e39f3bd912c,
+    type: 3}
+  destroyRockFX: {fileID: 3927844079346959721, guid: fbb34e09bd3f4904fba294a8a4a7ca24,
     type: 3}
   LootCyanOreFX: {fileID: 2348033671019227873, guid: 3600c31781daa2b48a5ca40572fa6e64,
     type: 3}

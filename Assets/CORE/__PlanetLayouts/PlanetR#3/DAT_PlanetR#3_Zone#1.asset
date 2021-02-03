@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e89da45f17f704ebdadb1a546cf8a9, type: 3}
   m_Name: DAT_PlanetR#3_Zone#1
   m_EditorClassIdentifier: 
-  offsetPosition: {x: -2.46, y: -2.36}
-  radius: 1.8
-  spacing: 0.8
-  count: {x: 2, y: 5}
+  offsetPosition: {x: -2, y: -1.9}
+  radius: 2.2
+  count: {x: 4, y: 8}
